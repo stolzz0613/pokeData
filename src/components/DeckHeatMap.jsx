@@ -76,7 +76,7 @@ function AxisSelector({ label, decks, selected, setSelected, iconMap }) {
           Clear All
         </button>
       </div>
-      <div className="grid grid-cols-2 gap-2 max-h-64 overflow-auto border rounded p-2">
+      <div className="grid grid-cols gap-2 max-h-64 overflow-auto border rounded p-2">
         {decks.map(d => {
           const icons = iconMap[d] || [];
           return (
@@ -213,7 +213,7 @@ export default function DeckHeatmap({ csvText, summaryData }) {
   const yMaxIcons = Math.max(...filteredY.map(d => (iconMap[d] || []).length), 1);
   const iconSize = 30;
   const spacing = 8;
-  const leftMargin = yMaxIcons * (iconSize + spacing) + halfSize + 10;
+  const leftMargin = yMaxIcons * (iconSize);
   const bottomMargin = xMaxIcons * (iconSize + spacing) + halfSize + 10;
   const topMargin = halfSize + 20;
   const rightMargin = halfSize + 20;
@@ -246,7 +246,6 @@ export default function DeckHeatmap({ csvText, summaryData }) {
           <MatchSummaryMatrix key={s.deckY} {...s} iconMap={iconMap} />
         ))}
       </div>
-
       {/* Gráfico */}
       <ResponsiveContainer width="100%" height={600}>
         <ScatterChart margin={{ top: topMargin, right: rightMargin, bottom: bottomMargin, left: leftMargin }}>

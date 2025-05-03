@@ -3,7 +3,7 @@ import tournaments from "../data/tournaments.json";
 
 export default function Sidebar() {
   return (
-    <aside className="w-56 p-4 bg-gradient-to-b from-red-600 to-white border-r-4 border-black shadow-lg">
+    <aside className="hidden lg:block w-56 p-4 bg-gradient-to-b from-red-600 to-white border-r-4 border-black shadow-lg">
       <nav>
         <ul className="space-y-4">
           {/* Link fijo a Home */}

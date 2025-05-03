@@ -2342,7 +2342,7 @@
       },
       {
         "name": "Sebastian Ardila",
-        "deck": "joltik-box",
+        "deck": "joltik-pikachu",
         "status": "dnq"
       },
       {
@@ -2442,7 +2442,7 @@
       },
       {
         "name": "Michael Huynh",
-        "deck": "joltik-box",
+        "deck": "joltik-pikachu",
         "status": "dnq"
       },
       {
@@ -2674,7 +2674,7 @@
         "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon.png",
         "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon-cornerstone.png"
       ],
-      "joltik-box": [
+      "joltik-pikachu": [
         "https://r2.limitlesstcg.net/pokemon/gen9/joltik.png",
         "https://r2.limitlesstcg.net/pokemon/gen9/pikachu.png"
       ],
