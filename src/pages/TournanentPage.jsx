@@ -20,7 +20,7 @@ export default function TournamentPage() {
     setError(null);
 
     // cargar CSV
-    fetch(`/data/${slug}/results.csv`)
+    fetch(`data/${slug}/results.csv`)
       .then(res => {
         if (!res.ok) throw new Error('CSV no encontrado');
         return res.text();
@@ -29,7 +29,7 @@ export default function TournamentPage() {
       .catch(e => setError(e.message));
 
     // cargar JSON
-    fetch(`/data/${slug}/decks_summary.json`)
+    fetch(`data/${slug}/decks_summary.json`)
       .then(res => {
         if (!res.ok) throw new Error('JSON no encontrado');
         return res.json();

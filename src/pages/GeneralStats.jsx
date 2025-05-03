@@ -16,7 +16,7 @@ export default function GeneralStatsChart({ slug }) {
 
   // Cargar standings.json y deckIcons
   useEffect(() => {
-    fetch(`/data/${slug}/standings.json`)
+    fetch(`data/${slug}/standings.json`)
       .then(res => {
         if (!res.ok) throw new Error('standings.json no encontrado');
         return res.json();
@@ -28,7 +28,7 @@ export default function GeneralStatsChart({ slug }) {
       .catch(err => setError(err.message));
 
     // Cargar top3.json
-    fetch(`/data/${slug}/top3.json`)
+    fetch(`data/${slug}/top3.json`)
       .then(res => {
         if (!res.ok) throw new Error('top3.json no encontrado');
         return res.json();
