@@ -45,7 +45,7 @@
       "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png"
     ]
   },
-  "poison-archaludon": {
+  "archaludon-brute-bonnet": {
     "count": 20,
     "icons": [
       "https://r2.limitlesstcg.net/pokemon/gen9/archaludon.png",
@@ -66,7 +66,7 @@
       "https://r2.limitlesstcg.net/pokemon/gen9/pidgeot.png"
     ]
   },
-  "tera-box": {
+  "noctowl-ogerpon-wellspring": {
     "count": 44,
     "icons": [
       "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png",
@@ -204,7 +204,7 @@
       "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon-cornerstone.png"
     ]
   },
-  "joltik-box": {
+  "joltik-pikachu": {
     "count": 2,
     "icons": [
       "https://r2.limitlesstcg.net/pokemon/gen9/joltik.png",

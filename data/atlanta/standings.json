@@ -57,7 +57,7 @@
     },
     {
       "name": "Isaiah Cheville",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Preston Rutledge",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
@@ -192,7 +192,7 @@
     },
     {
       "name": "Nicholas Moffitt",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -237,7 +237,7 @@
     },
     {
       "name": "Rafal Gladysz",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -247,7 +247,7 @@
     },
     {
       "name": "Andrew Martin",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -382,7 +382,7 @@
     },
     {
       "name": "BJ Brownell",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
@@ -512,7 +512,7 @@
     },
     {
       "name": "Alex LeBlanc",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -522,7 +522,7 @@
     },
     {
       "name": "Elliot Gordon",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -617,7 +617,7 @@
     },
     {
       "name": "Callum Elliott",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -652,7 +652,7 @@
     },
     {
       "name": "Edward Soto Jr.",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -667,7 +667,7 @@
     },
     {
       "name": "Passawat Patkiatjaroen",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -682,7 +682,7 @@
     },
     {
       "name": "Richard Cornwall",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
@@ -702,7 +702,7 @@
     },
     {
       "name": "Thomas Veazie",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -727,7 +727,7 @@
     },
     {
       "name": "Clay McGill",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
@@ -797,7 +797,7 @@
     },
     {
       "name": "Richard Sepulveda",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -822,12 +822,12 @@
     },
     {
       "name": "Shane McManus",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
       "name": "Michael Schwartz",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
@@ -857,7 +857,7 @@
     },
     {
       "name": "Allen Vergara",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -867,7 +867,7 @@
     },
     {
       "name": "Dylan Colburn",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
@@ -907,7 +907,7 @@
     },
     {
       "name": "Ivan Tafoya",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -952,7 +952,7 @@
     },
     {
       "name": "Joshua Miranda",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
@@ -992,7 +992,7 @@
     },
     {
       "name": "David Burson",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -1012,7 +1012,7 @@
     },
     {
       "name": "Chase Hoffman",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -1042,7 +1042,7 @@
     },
     {
       "name": "Josh Wilmerding",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
@@ -1067,7 +1067,7 @@
     },
     {
       "name": "Matthew Larsh Jr",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -1127,7 +1127,7 @@
     },
     {
       "name": "Josiah Miller",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
@@ -1157,7 +1157,7 @@
     },
     {
       "name": "Gabryelle Fulp",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -1232,7 +1232,7 @@
     },
     {
       "name": "Joshua Raftopoulos",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -1257,7 +1257,7 @@
     },
     {
       "name": "McKinley Freeman",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "day2"
     },
     {
@@ -1287,7 +1287,7 @@
     },
     {
       "name": "William Cornelison",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -1347,7 +1347,7 @@
     },
     {
       "name": "Bryce Branch",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "day2"
     },
     {
@@ -1377,7 +1377,7 @@
     },
     {
       "name": "Kevin Hernandez",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1402,7 +1402,7 @@
     },
     {
       "name": "Brandon Nguyen",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1412,7 +1412,7 @@
     },
     {
       "name": "Bryan McDaniel",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "dnq"
     },
     {
@@ -1457,7 +1457,7 @@
     },
     {
       "name": "Matthew Sanders",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "dnq"
     },
     {
@@ -1502,7 +1502,7 @@
     },
     {
       "name": "Benjamin Nackman",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
       "name": "Jamie Chesnut",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1562,7 +1562,7 @@
     },
     {
       "name": "Jaxson Chandler",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1587,7 +1587,7 @@
     },
     {
       "name": "Matthew Mahon",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1617,17 +1617,17 @@
     },
     {
       "name": "David Rea",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
       "name": "Eric Hogan",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
       "name": "Cody Falls",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1647,7 +1647,7 @@
     },
     {
       "name": "Michael Nilo",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "dnq"
     },
     {
@@ -1657,7 +1657,7 @@
     },
     {
       "name": "MK Choy",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1717,7 +1717,7 @@
     },
     {
       "name": "Jie Ran",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1827,7 +1827,7 @@
     },
     {
       "name": "Alejandro Flores",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "dnq"
     },
     {
@@ -1837,7 +1837,7 @@
     },
     {
       "name": "Trey Bowen",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "dnq"
     },
     {
@@ -1917,7 +1917,7 @@
     },
     {
       "name": "Zach Lowman",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1927,7 +1927,7 @@
     },
     {
       "name": "Aaron Walker",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1942,12 +1942,12 @@
     },
     {
       "name": "Nelson Cuevas",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
       "name": "Bradley Curcio",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -1977,12 +1977,12 @@
     },
     {
       "name": "Matthew Fox",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
       "name": "Sean Robison",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -2022,7 +2022,7 @@
     },
     {
       "name": "Dylan Donley",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -2162,7 +2162,7 @@
     },
     {
       "name": "Raul Calderon",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -2202,7 +2202,7 @@
     },
     {
       "name": "Adam Knowles",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -2292,7 +2292,7 @@
     },
     {
       "name": "Eric Francis",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -2312,7 +2312,7 @@
     },
     {
       "name": "Jacob Heavener",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -2342,7 +2342,7 @@
     },
     {
       "name": "Sebastian Ardila",
-      "deck": "joltik-box",
+      "deck": "joltik-pikachu",
       "status": "dnq"
     },
     {
@@ -2407,7 +2407,7 @@
     },
     {
       "name": "Jeff Jones",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -2442,7 +2442,7 @@
     },
     {
       "name": "Michael Huynh",
-      "deck": "joltik-box",
+      "deck": "joltik-pikachu",
       "status": "dnq"
     },
     {
@@ -2467,7 +2467,7 @@
     },
     {
       "name": "James Kuenzer",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "dnq"
     },
     {
@@ -2497,7 +2497,7 @@
     },
     {
       "name": "Isaac Chance",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -2527,7 +2527,7 @@
     },
     {
       "name": "Christopher Thomason",
-      "deck": "tera-box",
+      "deck": "noctowl-ogerpon-wellspring",
       "status": "dnq"
     },
     {
@@ -2537,7 +2537,7 @@
     },
     {
       "name": "Alex Raymond",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "dnq"
     },
     {
@@ -2552,7 +2552,7 @@
     },
     {
       "name": "Chase Santayana",
-      "deck": "poison-archaludon",
+      "deck": "archaludon-brute-bonnet",
       "status": "dnq"
     },
     {
@@ -2587,7 +2587,7 @@
       "https://r2.limitlesstcg.net/pokemon/gen9/flareon.png",
       "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png"
     ],
-    "poison-archaludon": [
+    "archaludon-brute-bonnet": [
       "https://r2.limitlesstcg.net/pokemon/gen9/archaludon.png",
       "https://r2.limitlesstcg.net/pokemon/gen9/brute-bonnet.png"
     ],
@@ -2599,7 +2599,7 @@
       "https://r2.limitlesstcg.net/pokemon/gen9/charizard.png",
       "https://r2.limitlesstcg.net/pokemon/gen9/pidgeot.png"
     ],
-    "tera-box": [
+    "noctowl-ogerpon-wellspring": [
       "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png",
       "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon-wellspring.png"
     ],
@@ -2674,7 +2674,7 @@
       "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon.png",
       "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon-cornerstone.png"
     ],
-    "joltik-box": [
+    "joltik-pikachu": [
       "https://r2.limitlesstcg.net/pokemon/gen9/joltik.png",
       "https://r2.limitlesstcg.net/pokemon/gen9/pikachu.png"
     ],
