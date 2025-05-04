@@ -57,17 +57,18 @@ function getColor(value) {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-// Axis selector component
-function AxisSelector({ label, decks, selected, setSelected, iconMap }) {
+// Axis selector with maxSelect support
+function AxisSelector({ label, decks, selected, setSelected, iconMap, maxSelect }) {
   return (
     <div className="flex-1">
       <label className="block mb-2 font-medium">{label}</label>
       <div className="inline-flex gap-2 mb-2 items-center">
         <button
-          onClick={() => setSelected(decks)}
-          className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm"
+          onClick={() => setSelected(decks.slice(0, maxSelect))}
+          disabled={decks.length === 0}
+          className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm disabled:opacity-50"
         >
-          Select All
+          Select Top {maxSelect}
         </button>
         <button
           onClick={() => setSelected([])}
@@ -79,18 +80,26 @@ function AxisSelector({ label, decks, selected, setSelected, iconMap }) {
       <div className="grid grid-cols gap-2 max-h-64 overflow-auto border rounded p-2">
         {decks.map(d => {
           const icons = iconMap[d] || [];
+          const isChecked = selected.includes(d);
+          const isDisabled = !isChecked && selected.length >= maxSelect;
           return (
-            <label key={d} className="inline-flex items-center space-x-2">
+            <label
+              key={d}
+              className={`inline-flex items-center space-x-2 ${isDisabled ? 'opacity-50' : ''}`}
+            >
               {icons.map((url, idx) => (
                 <img key={idx} src={url} alt="" className="h-6 w-6 rounded-full" />
               ))}
               <input
                 type="checkbox"
-                checked={selected.includes(d)}
+                checked={isChecked}
+                disabled={isDisabled}
                 onChange={e => {
                   const checked = e.target.checked;
                   setSelected(prev =>
-                    checked ? [...prev, d] : prev.filter(x => x !== d)
+                    checked
+                      ? [...prev, d].slice(0, maxSelect)
+                      : prev.filter(x => x !== d)
                   );
                 }}
                 className="h-4 w-4 text-blue-600"
@@ -119,7 +128,7 @@ function MatchSummaryMatrix({ deckY, best, worst, iconMap }) {
         {best.map(({ deck, value }) => (
           <div key={deck} className="flex flex-col items-center">
             <div className="flex space-x-1 mb-1">
-              {((iconMap[deck] || [])).map((u, i) => (
+              {(iconMap[deck] || []).map((u, i) => (
                 <img key={i} src={u} alt="" className="h-6 w-6 rounded-full" />
               ))}
             </div>
@@ -133,7 +142,7 @@ function MatchSummaryMatrix({ deckY, best, worst, iconMap }) {
         {worst.map(({ deck, value }) => (
           <div key={deck} className="flex flex-col items-center">
             <div className="flex space-x-1 mb-1">
-              {((iconMap[deck] || [])).map((u, i) => (
+              {(iconMap[deck] || []).map((u, i) => (
                 <img key={i} src={u} alt="" className="h-6 w-6 rounded-full" />
               ))}
             </div>
@@ -148,33 +157,39 @@ function MatchSummaryMatrix({ deckY, best, worst, iconMap }) {
 }
 
 export default function DeckHeatmap({ csvText, summaryData }) {
-  // 1) calcula decks/matrix/iconMap
   const { decks, matrix, iconMap } = useMemo(
     () => computeHeatmapData(csvText, summaryData),
     [csvText, summaryData]
   );
 
-  // 2) estados iniciales vacíos
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mql = window.matchMedia('(max-width: 639px)');
+    const onChange = e => setIsMobile(e.matches);
+    mql.addEventListener('change', onChange);
+    setIsMobile(mql.matches);
+    return () => mql.removeEventListener('change', onChange);
+  }, []);
+
+  const iconSize = isMobile ? 18 : 30;
+
   const [xDecks, setXDecks] = useState([]);
   const [yDecks, setYDecks] = useState([]);
 
-  // 3) al cambiar el listado de decks, resetea selecciones
   useEffect(() => {
-    setXDecks(decks);
+    const maxX = isMobile ? 5 : decks.length;
+    setXDecks(decks.slice(0, maxX));
     setYDecks(decks.length > 0 ? [decks[0]] : []);
-  }, [decks]);
+  }, [decks, isMobile]);
 
-  // 4) construye indexMap
   const indexMap = useMemo(
     () => decks.reduce((m, d, i) => ({ ...m, [d]: i }), {}),
     [decks]
   );
 
-  // 5) filtra X/Y contra indexMap
   const filteredX = xDecks.filter(d => indexMap[d] !== undefined);
   const filteredY = yDecks.filter(d => indexMap[d] !== undefined);
 
-  // 6) recrea puntos con X/Y filtrados
   const points = useMemo(() => {
     const pts = [];
     filteredY.forEach((deckY, y) => {
@@ -186,7 +201,6 @@ export default function DeckHeatmap({ csvText, summaryData }) {
     return pts;
   }, [filteredX, filteredY, matrix, indexMap]);
 
-  // 7) summary también usa filtrados
   const summary = useMemo(
     () =>
       filteredY.map(deckY => {
@@ -206,14 +220,12 @@ export default function DeckHeatmap({ csvText, summaryData }) {
     [filteredX, filteredY, matrix, indexMap]
   );
 
-  // 8) márgenes y tamaños (igual que antes)
   const squareSize = 40;
   const halfSize = squareSize / 2;
   const xMaxIcons = Math.max(...filteredX.map(d => (iconMap[d] || []).length), 1);
   const yMaxIcons = Math.max(...filteredY.map(d => (iconMap[d] || []).length), 1);
-  const iconSize = 30;
   const spacing = 8;
-  const leftMargin = yMaxIcons * (iconSize);
+  const leftMargin = yMaxIcons * iconSize;
   const bottomMargin = xMaxIcons * (iconSize + spacing) + halfSize + 10;
   const topMargin = halfSize + 20;
   const rightMargin = halfSize + 20;
@@ -221,15 +233,15 @@ export default function DeckHeatmap({ csvText, summaryData }) {
   return (
     <div className="p-6 bg-white rounded-lg shadow">
       <h2 className="text-2xl font-semibold mb-4">Heatmap de Winrates</h2>
-
       {/* Selectores */}
-      <div className="flex gap-4 mb-6">
+      <div className="flex flex-col sm:flex-row gap-4 mb-6">
         <AxisSelector
           label="Eje Y"
           decks={decks}
           selected={yDecks}
           setSelected={setYDecks}
           iconMap={iconMap}
+          maxSelect={decks.length}
         />
         <AxisSelector
           label="Eje X"
@@ -237,9 +249,9 @@ export default function DeckHeatmap({ csvText, summaryData }) {
           selected={xDecks}
           setSelected={setXDecks}
           iconMap={iconMap}
+          maxSelect={isMobile ? 5 : decks.length}
         />
       </div>
-
       {/* Summary */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         {summary.map(s => (
@@ -252,7 +264,7 @@ export default function DeckHeatmap({ csvText, summaryData }) {
           <XAxis
             type="number"
             dataKey="x"
-            domain={[-0.5, filteredX.length - 0.5]}
+            domain={[-1, filteredX.length - 1]}
             ticks={filteredX.map((_, i) => i)}
             interval={0}
             height={bottomMargin}
@@ -261,7 +273,11 @@ export default function DeckHeatmap({ csvText, summaryData }) {
                 <image
                   key={idx}
                   href={url}
-                  x={x + idx * (iconSize + spacing) - (((iconMap[filteredX[payload.value]] || []).length * (iconSize + spacing) - spacing) / 2)}
+                  x={
+                    x +
+                    idx * (iconSize + spacing) -
+                    (((iconMap[filteredX[payload.value]] || []).length * (iconSize + spacing) - spacing) / 2)
+                  }
                   y={y + iconSize + spacing}
                   width={iconSize}
                   height={iconSize}

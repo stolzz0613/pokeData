@@ -1,12 +1,20 @@
 import { NavLink } from "react-router-dom";
 import tournaments from "../data/tournaments.json";
 
-export default function Sidebar() {
+export default function Sidebar({ isOpen }) {
   return (
-    <aside className="hidden lg:block w-56 p-4 bg-gradient-to-b from-red-600 to-white border-r-4 border-black shadow-lg">
+    <aside
+      className={`
+        ${isOpen ? "block" : "hidden"}
+        fixed inset-y-0 left-0
+        w-56 p-4
+        bg-gradient-to-b from-red-600 to-white
+        border-r-4 border-black
+        shadow-lg z-40
+      `}
+    >
       <nav>
         <ul className="space-y-4">
-          {/* Link fijo a Home */}
           <li>
             <NavLink
               to="/"
@@ -23,8 +31,6 @@ export default function Sidebar() {
               Home
             </NavLink>
           </li>
-
-          {/* Links dinámicos desde el JSON */}
           {tournaments.map(({ slug, name, icon }) => (
             <li key={slug}>
               <NavLink
