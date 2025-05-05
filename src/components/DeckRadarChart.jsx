@@ -7,6 +7,7 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
   Cell,
+  Legend,
 } from "recharts";
 import Papa from "papaparse";
 
@@ -63,14 +64,26 @@ export default function DeckRadarChart({ csvText, summaryData, analysis }) {
     [rows, summaryData]
   );
 
-  // selected deck state
-  const [selectedDeck, setSelectedDeck] = useState(decks[0] || "");
+  // selected decks state
+  const [deckA, setDeckA] = useState(decks[0] || "");
+  const [deckB, setDeckB] = useState(decks[1] || "");
 
-  // data for radar: vs opponents
-  const radarData = useMemo(
-    () => computeOpponentsData(rows, selectedDeck),
-    [rows, selectedDeck]
-  );
+  // data for each deck
+  const dataA = useMemo(() => computeOpponentsData(rows, deckA), [rows, deckA]);
+  const dataB = useMemo(() => computeOpponentsData(rows, deckB), [rows, deckB]);
+
+  // merge opponents into one dataset
+  const mergedData = useMemo(() => {
+    const opponents = Array.from(
+      new Set([...dataA.map((d) => d.deck), ...dataB.map((d) => d.deck)])
+    );
+    return opponents.map((op) => ({
+      deck: op,
+      winrateA: dataA.find((d) => d.deck === op)?.winrate || 0,
+      winrateB: dataB.find((d) => d.deck === op)?.winrate || 0,
+      icons: iconMap[op] || [],
+    }));
+  }, [dataA, dataB, iconMap]);
 
   // render icons as axis labels
   const renderTick = ({ payload, x, y }) => {
@@ -91,9 +104,9 @@ export default function DeckRadarChart({ csvText, summaryData, analysis }) {
   };
 
   return (
-    <div className="p-4 bg-white rounded-lg shadow flex flex-col">
+    <div className="p-4 bg-white rounded-lg shadow flex flex-col space-y-6">
       {/* Language switch */}
-      <div className="mb-4 flex items-center space-x-2">
+      <div className="flex items-center space-x-2">
         <label className="font-medium">Language:</label>
         <select
           value={lang}
@@ -105,62 +118,112 @@ export default function DeckRadarChart({ csvText, summaryData, analysis }) {
         </select>
       </div>
 
-      {/* Deck selector */}
-      <div className="mb-4">
-        <label className="block mb-2 font-medium">Select your deck:</label>
-        <div className="inline-flex items-center space-x-2">
-          {selectedDeck &&
-            (iconMap[selectedDeck] || []).map((url, i) => (
-              <img
-                key={i}
-                src={url}
-                alt=""
-                className="h-6 w-6 rounded-full"
-              />
-            ))}
-          <select
-            value={selectedDeck}
-            onChange={(e) => setSelectedDeck(e.target.value)}
-            className="px-3 py-1 border rounded"
-          >
-            {decks.map((slug) => (
-              <option key={slug} value={slug}>
-                {slug.replace(/\//g, " ")}
-              </option>
-            ))}
-          </select>
+      {/* Deck selectors */}
+      <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+        {/* Selector Deck A */}
+        <div>
+          <label className="block mb-1 font-medium">Deck A:</label>
+          <div className="flex items-center space-x-2">
+            {deckA &&
+              iconMap[deckA]?.map((url, i) => (
+                <img
+                  key={`iconA-${i}`}
+                  src={url}
+                  alt={deckA}
+                  className="h-6 w-6 rounded-full"
+                />
+              ))}
+            <select
+              value={deckA}
+              onChange={(e) => setDeckA(e.target.value)}
+              className="px-3 py-1 border rounded"
+            >
+              {decks.map((slug) => (
+                <option key={slug} value={slug}>
+                  {slug.replace(/\//g, " ")}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Selector Deck B */}
+        <div>
+          <label className="block mb-1 font-medium">Deck B:</label>
+          <div className="flex items-center space-x-2">
+            {deckB &&
+              iconMap[deckB]?.map((url, i) => (
+                <img
+                  key={`iconB-${i}`}
+                  src={url}
+                  alt={deckB}
+                  className="h-6 w-6 rounded-full"
+                />
+              ))}
+            <select
+              value={deckB}
+              onChange={(e) => setDeckB(e.target.value)}
+              className="px-3 py-1 border rounded"
+            >
+              {decks.map((slug) => (
+                <option key={slug} value={slug}>
+                  {slug.replace(/\//g, " ")}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
 
-      {/* Radar chart */}
+      {/* Radar chart comparing both */}
       <div style={{ width: "100%", height: 500 }}>
         <ResponsiveContainer>
           <RadarChart
             outerRadius="80%"
-            data={radarData}
+            data={mergedData}
             margin={{ top: 20, right: 30, bottom: 20, left: 30 }}
           >
             <PolarGrid />
             <PolarAngleAxis dataKey="deck" tick={renderTick} />
             <PolarRadiusAxis angle={30} domain={[0, 100]} tickCount={6} />
-            <Radar name="Winrate" dataKey="winrate" fillOpacity={0.6}>
-              {radarData.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={entry.winrate >= 50 ? "#00C49F" : "#FF8042"}
-                />
-              ))}
-            </Radar>
+            <Legend verticalAlign="top" height={36} />
+            <Radar
+              name={deckA.replace(/\//g, " ")}
+              dataKey="winrateA"
+              stroke="#00C49F"
+              fill="#00C49F"
+              fillOpacity={0.4}
+            />
+            <Radar
+              name={deckB.replace(/\//g, " ")}
+              dataKey="winrateB"
+              stroke="#FF8042"
+              fill="#FF8042"
+              fillOpacity={0.4}
+            />
           </RadarChart>
         </ResponsiveContainer>
       </div>
 
-      {/* Analysis text */}
-      {selectedDeck && (
-        <div className="mt-4 p-4 bg-gray-100 text-sm text-gray-800 rounded">
-          {analysis?.[selectedDeck]?.[lang]}
-        </div>
-      )}
+      {/* Analysis texts */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-800">
+        {deckA && analysis?.[deckA]?.[lang] && (
+          <div className="p-4 bg-gray-100 rounded">
+            <h4 className="font-semibold mb-2">
+              Analysis for {deckA.replace(/\//g, " ")}
+            </h4>
+            <div>{analysis[deckA][lang]}</div>
+          </div>
+        )}
+        {deckB && analysis?.[deckB]?.[lang] && (
+          <div className="p-4 bg-gray-100 rounded">
+            <h4 className="font-semibold mb-2">
+              Analysis for {deckB.replace(/\//g, " ")}
+            </h4>
+            <div>{analysis[deckB][lang]}</div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -7,10 +7,10 @@ export default function Layout() {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
 
   return (
-    <div className="flex h-screen w-full px-0 md:px-[100px]">
+    <div className="flex h-screen w-full px-0">
       <Sidebar isOpen={isSidebarOpen} />
 
-      <main className="flex-1 bg-white p-4 overflow-auto relative">
+      <main className="flex-1 bg-white p-4 overflow-auto relative md:px-[100px]">
         {/* Poké Ball Toggle Button */}
         <button
           onClick={() => setSidebarOpen(o => !o)}
