@@ -1,11 +1,6 @@
-// src/pages/TournamentPage.jsx
 import React, { useState, useEffect } from 'react';
-import {
-  useParams,
-  NavLink,
-  Outlet,
-  useOutletContext
-} from 'react-router-dom';
+import { useParams, NavLink, Outlet, useOutletContext } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import DeckHeatmap from '../components/DeckHeatMap.jsx';
 import GeneralStats from './GeneralStats.jsx';
 import DeckRadarChart from '../components/DeckRadarChart.jsx';
@@ -51,49 +46,70 @@ export default function TournamentPage() {
   if (error) return <div className="text-red-600">Error: {error}</div>;
   if (!csvText || !summaryData || !analysis) return <div>Cargando datos…</div>;
 
-  return (
-    <div>
-      {/* Navbar interna de pestañas */}
-      <nav className="flex justify-center md:justify-start space-x-4 mb-8 border-b pb-4">
-        <NavLink
-          to=""
-          end
-          className={({ isActive }) =>
-            isActive
-              ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
-              : 'text-gray-600 hover:text-blue-600'
-          }
-        >
-          General
-        </NavLink>
-        <NavLink
-          to="heatmap"
-          className={({ isActive }) =>
-            isActive
-              ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
-              : 'text-gray-600 hover:text-blue-600'
-          }
-        >
-          Heatmap
-        </NavLink>
-        <NavLink
-          to="radarchart"
-          className={({ isActive }) =>
-            isActive
-              ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
-              : 'text-gray-600 hover:text-blue-600'
-          }
-        >
-          Radar Chart
-        </NavLink>
-      </nav>
+  // Capitalize tournament name for title
+  const titleName = tournament.charAt(0).toUpperCase() + tournament.slice(1);
 
-      {/* Aquí se renderiza la pestaña activa */}
-      <Outlet context={{ csvText, summaryData, slug, analysis }} />
-    </div>
+  return (
+    <>
+      <Helmet>
+        <title>{`${titleName} Tournament Stats | MonsterData TCG`}</title>
+        <meta
+          name="description"
+          content={`Explore matchup statistics, heatmaps, and radar charts for the ${titleName} tournament on MonsterData TCG.`}
+        />
+        <meta property="og:title" content={`${titleName} Tournament Stats`} />
+        <meta
+          property="og:description"
+          content={`Dive into detailed analytics for the ${titleName} tournament matchups and decks.`}
+        />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={`https://monsterdata.online/${slug}`} />
+      </Helmet>
+
+      <div>
+        {/* Navbar interna de pestañas */}
+        <nav className="flex justify-center md:justify-start space-x-4 mb-8 border-b pb-4">
+          <NavLink
+            to=""
+            end
+            className={({ isActive }) =>
+              isActive
+                ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
+                : 'text-gray-600 hover:text-blue-600'
+            }
+          >
+            General
+          </NavLink>
+          <NavLink
+            to="heatmap"
+            className={({ isActive }) =>
+              isActive
+                ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
+                : 'text-gray-600 hover:text-blue-600'
+            }
+          >
+            Heatmap
+          </NavLink>
+          <NavLink
+            to="radarchart"
+            className={({ isActive }) =>
+              isActive
+                ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
+                : 'text-gray-600 hover:text-blue-600'
+            }
+          >
+            Radar Chart
+          </NavLink>
+        </nav>
+
+        {/* Aquí se renderiza la pestaña activa */}
+        <Outlet context={{ csvText, summaryData, slug, analysis }} />
+      </div>
+    </>
   );
 }
 
+// Sub-tabs
 TournamentPage.Heatmap = function HeatmapTab() {
   const { csvText, summaryData, slug } = useOutletContext();
   return (

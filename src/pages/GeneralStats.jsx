@@ -1,12 +1,6 @@
-// src/pages/GeneralStats.jsx
 import React, { useState, useEffect, useMemo } from 'react';
-import {
-  ResponsiveContainer,
-  PieChart,
-  Pie,
-  Cell,
-  Tooltip,
-} from 'recharts';
+import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
+import { Helmet } from 'react-helmet-async';
 
 export default function GeneralStatsChart({ slug }) {
   const [players, setPlayers] = useState(null);
@@ -59,6 +53,9 @@ export default function GeneralStatsChart({ slug }) {
   if (error) return <div className="text-red-600">Error: {error}</div>;
   if (!players) return <div>Cargando estadísticas…</div>;
 
+  // Capitalizar slug para título
+  const titleName = slug.charAt(0).toUpperCase() + slug.slice(1);
+
   const COLORS = [
     '#8884d8', '#8dd1e1', '#ffc658', '#ff8042',
     '#a4de6c', '#d0ed57', '#82ca9d', '#d0ed57',
@@ -66,9 +63,7 @@ export default function GeneralStatsChart({ slug }) {
   ];
 
   // Render de iconos dentro de cada slice
-  const renderIconLabels = ({
-    cx, cy, midAngle, innerRadius, outerRadius, payload
-  }) => {
+  const renderIconLabels = ({ cx, cy, midAngle, innerRadius, outerRadius, payload }) => {
     const RADIAN = Math.PI / 180;
     const radius = innerRadius + (outerRadius - innerRadius) * 0.7;
     const x = cx + radius * Math.cos(-midAngle * RADIAN);
@@ -134,11 +129,7 @@ export default function GeneralStatsChart({ slug }) {
                   onClick={entry => setSelectedDeck(entry.deck)}
                 >
                   {data.map((_, idx) => (
-                    <Cell
-                      key={`cell-${idx}`}
-                      fill={COLORS[idx % COLORS.length]}
-                      cursor="pointer"
-                    />
+                    <Cell key={`cell-${idx}`} fill={COLORS[idx % COLORS.length]} cursor="pointer" />
                   ))}
                 </Pie>
                 <Tooltip formatter={val => [`${val}`, 'Count']} />
@@ -154,23 +145,12 @@ export default function GeneralStatsChart({ slug }) {
                 </h4>
                 <ul>
                   {top3[selectedDeck].map(item => (
-                    <li
-                      key={item.rank}
-                      className="flex items-center justify-between mb-3"
-                    >
+                    <li key={item.rank} className="flex items-center justify-between mb-3">
                       <span className="font-semibold">{item.rank}.</span>
                       <span className="flex-1 mx-2">{item.name}</span>
                       {deckIconsMap[selectedDeck]?.[0] && (
-                        <a
-                          href={item.decklist_link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src={deckIconsMap[selectedDeck][0]}
-                            alt={selectedDeck}
-                            className="w-6 h-6"
-                          />
+                        <a href={item.decklist_link} target="_blank" rel="noopener noreferrer">
+                          <img src={deckIconsMap[selectedDeck][0]} alt={selectedDeck} className="w-6 h-6" />
                         </a>
                       )}
                     </li>
@@ -187,13 +167,29 @@ export default function GeneralStatsChart({ slug }) {
   };
 
   return (
-    <div>
-      <h2 className="text-4xl font-bold mb-12">Estadística General</h2>
-      <div className="grid grid-cols-1 gap-12">
-        <ChartCard title="Top 10 General" data={generalData} />
-        <ChartCard title="Top 10 Día 2" data={day2Data} />
-        <ChartCard title="Todos Topcut" data={topcutData} />
+    <>
+      <Helmet>
+        <title>{`${titleName} Tournament – General Stats | MonsterData TCG`}</title>
+        <meta
+          name="description"
+          content={`Visualiza la distribución de decks y el top 3 de posiciones en el torneo ${titleName} en MonsterData TCG.`}
+        />
+        <meta property="og:title" content={`${titleName} Tournament – General Stats`} />
+        <meta
+          property="og:description"
+          content={`Mira cómo se distribuyeron los decks y quiénes dominaron el ${titleName}.`}
+        />
+        <link rel="canonical" href={`https://monsterdata.online/${slug}/`} />
+      </Helmet>
+
+      <div>
+        <h2 className="text-4xl font-bold mb-12">Estadística General</h2>
+        <div className="grid grid-cols-1 gap-12">
+          <ChartCard title="Top 10 General" data={generalData} />
+          <ChartCard title="Top 10 Día 2" data={day2Data} />
+          <ChartCard title="Todos Topcut" data={topcutData} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
