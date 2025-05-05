@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://monsterdata.online/sitemap.xml

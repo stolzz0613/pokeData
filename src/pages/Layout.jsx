@@ -1,10 +1,14 @@
 // src/layouts/Layout.jsx
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 
 export default function Layout() {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
+
+  useEffect(() => {
+    document.dispatchEvent(new Event('render-event'))
+  }, [])
 
   return (
     <div className="flex h-screen w-full px-0">
