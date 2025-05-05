@@ -17,7 +17,7 @@
     },
     {
       "name": "Piotr MatliÅski",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "topcut"
     },
     {
@@ -47,7 +47,7 @@
     },
     {
       "name": "Thomas Abbott",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "topcut"
     },
     {
@@ -62,7 +62,7 @@
     },
     {
       "name": "Janielk JimÃ©nez GÃ³mez",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "day2"
     },
     {
@@ -77,7 +77,7 @@
     },
     {
       "name": "Alejandro Lobato Cantos",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "day2"
     },
     {
@@ -92,7 +92,7 @@
     },
     {
       "name": "Alejandro GonzÃ¡lez SÃ¡nchez",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "day2"
     },
     {
@@ -102,7 +102,7 @@
     },
     {
       "name": "Carlo Antonio del Vescovo",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "day2"
     },
     {
@@ -132,7 +132,7 @@
     },
     {
       "name": "JosÃ© RodrÃ­guez",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "day2"
     },
     {
@@ -152,7 +152,7 @@
     },
     {
       "name": "Cian Rushe",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "day2"
     },
     {
@@ -162,7 +162,7 @@
     },
     {
       "name": "Stephen Chan",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "day2"
     },
     {
@@ -192,7 +192,7 @@
     },
     {
       "name": "Andrew Nunez",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "day2"
     },
     {
@@ -262,12 +262,12 @@
     },
     {
       "name": "Marco Apolo Pulpillo Berrocal",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "day2"
     },
     {
       "name": "Fabrizio Tallone",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "day2"
     },
     {
@@ -342,7 +342,7 @@
     },
     {
       "name": "Brent Coosemans",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "day2"
     },
     {
@@ -382,7 +382,7 @@
     },
     {
       "name": "Daniel RomÃ¡n Jofre",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "day2"
     },
     {
@@ -412,12 +412,12 @@
     },
     {
       "name": "Jose Antonio Araquistain GÃ³mez",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "day2"
     },
     {
       "name": "Magnus Markussen",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "day2"
     },
     {
@@ -477,7 +477,7 @@
     },
     {
       "name": "Nico Sommerfeld",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "day2"
     },
     {
@@ -527,7 +527,7 @@
     },
     {
       "name": "Paul Myers",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "day2"
     },
     {
@@ -577,7 +577,7 @@
     },
     {
       "name": "Tobias Gervin",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "day2"
     },
     {
@@ -727,7 +727,7 @@
     },
     {
       "name": "Alvaro MuÃ±oz Mellen",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -857,12 +857,12 @@
     },
     {
       "name": "Alberto De Torres Rivera",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
       "name": "Francisco JesÃºs TomÃ¡s Tovar",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -937,7 +937,7 @@
     },
     {
       "name": "Elia Perrone",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -962,7 +962,7 @@
     },
     {
       "name": "Pedro GonzÃ¡lez Mancera",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -977,7 +977,7 @@
     },
     {
       "name": "Daniel Escudero RodrÃ­guez",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -1032,7 +1032,7 @@
     },
     {
       "name": "Victor ZHAO",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -1072,7 +1072,7 @@
     },
     {
       "name": "Daniel Brunsch",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -1122,7 +1122,7 @@
     },
     {
       "name": "Ismael GarcÃ­a Villaviciosa",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -1322,7 +1322,7 @@
     },
     {
       "name": "Francisco jose RodrÃ­guez HernÃ¡ndez",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -1332,7 +1332,7 @@
     },
     {
       "name": "Ludovic Orban",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -1342,7 +1342,7 @@
     },
     {
       "name": "Lucas Lorente",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -1357,12 +1357,12 @@
     },
     {
       "name": "TomÃ¡s MÃ¡rquez GarcÃ­a",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
       "name": "Jordan Gomez Garcia",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -1372,12 +1372,12 @@
     },
     {
       "name": "Manuel Wiechert",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
       "name": "Rafael Soares",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -1407,7 +1407,7 @@
     },
     {
       "name": "Paulo Durbeck",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -1432,7 +1432,7 @@
     },
     {
       "name": "Salvador Puig Marcos",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -1547,7 +1547,7 @@
     },
     {
       "name": "daniel tejero",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -1582,7 +1582,7 @@
     },
     {
       "name": "Manuel Ramas AlbarrÃ¡n",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -1592,7 +1592,7 @@
     },
     {
       "name": "Suresh Shahdadpuri DomÃ­nguez",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -1667,7 +1667,7 @@
     },
     {
       "name": "JosÃ© Manuel Miranda SÃ¡nchez",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -1742,7 +1742,7 @@
     },
     {
       "name": "AndrÃ©s GarcÃ­a-Serra Romero",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -1762,7 +1762,7 @@
     },
     {
       "name": "Enrique Vera Castro",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -1787,7 +1787,7 @@
     },
     {
       "name": "JORGE MARCOS HERNANDEZ",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -1797,7 +1797,7 @@
     },
     {
       "name": "Omar Mahmood",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -1932,7 +1932,7 @@
     },
     {
       "name": "Roberto Castilla Senero",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -2012,7 +2012,7 @@
     },
     {
       "name": "Rafa LÃ³pez",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -2132,7 +2132,7 @@
     },
     {
       "name": "IvÃ¡n FernÃ¡ndez Franch",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -2182,7 +2182,7 @@
     },
     {
       "name": "Konstantinos Chavdoulas",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -2282,7 +2282,7 @@
     },
     {
       "name": "SeÃ¡n Breen",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -2317,17 +2317,17 @@
     },
     {
       "name": "Jesus Villamizar",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
       "name": "Bosco MariÃ±o",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
       "name": "Pablo CendÃ³n",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -2337,7 +2337,7 @@
     },
     {
       "name": "Paulo DiÃ©guez Riande",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -2367,7 +2367,7 @@
     },
     {
       "name": "Pele Ifill",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -2392,7 +2392,7 @@
     },
     {
       "name": "CÃ©sar LÃ³pez AvilÃ©s",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -2462,7 +2462,7 @@
     },
     {
       "name": "Diego MuÃ±oz Espadas",
-      "deck": "joltik-pikachu",
+      "deck": "joltik-box",
       "status": "dnq"
     },
     {
@@ -2482,7 +2482,7 @@
     },
     {
       "name": "Leandro Othacehe",
-      "deck": "noctowl-ogerpon-wellspring",
+      "deck": "tera-box",
       "status": "dnq"
     },
     {
@@ -2567,7 +2567,7 @@
       "https://r2.limitlesstcg.net/pokemon/gen9/zoroark.png",
       "https://r2.limitlesstcg.net/pokemon/gen9/darmanitan.png"
     ],
-    "noctowl-ogerpon-wellspring": [
+    "tera-box": [
       "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png",
       "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon-wellspring.png"
     ],
@@ -2579,7 +2579,7 @@
       "https://r2.limitlesstcg.net/pokemon/gen9/raging-bolt.png",
       "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon.png"
     ],
-    "joltik-pikachu": [
+    "joltik-box": [
       "https://r2.limitlesstcg.net/pokemon/gen9/joltik.png",
       "https://r2.limitlesstcg.net/pokemon/gen9/pikachu.png"
     ],

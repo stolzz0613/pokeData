@@ -31,7 +31,7 @@
       "en": "Flareon ex/Noctowl employs Noctowl’s Jewel Seeker to tutor two Trainers upon evolution, ensuring consistent resource access for the aggressive two/Prize strategy. Flareon ex’s Burning Charge not only deals 130 damage but also accelerates two Basic Energy to any Pokémon, enabling early knockouts and tempo swings.",
       "es": "Flareon ex/Noctowl utiliza Búsqueda de Joyas de Noctowl para tutorizar dos Cartas de Entrenador al evolucionar, asegurando acceso constante a recursos para la agresiva estrategia de dos premios. Carga Ardiente de Flareon ex no solo inflige 130 de daño sino que también acelera dos Energías Básicas a cualquier Pokémon, permitiendo eliminaciones tempranas y cambios de tempo."
     },
-    "noctowl/ogerpon-wellspring": {
+    "tera-box": {
       "en": "Tera Box uses Wellspring Mask Ogerpon ex’s Torrential Pump to hit two targets for prize pressure while the Noctowl engine via Jewel Seeker guarantees essential Trainer cards each turn. Despite a steeper learning curve, this deck posted multiple Top 8 finishes on Limitless and remains a breakout archetype.",
       "es": "Tera Box usa Bomba Torrencial de Wellspring Mask Ogerpon ex para golpear dos objetivos y presionar premios, mientras que el motor de Noctowl mediante Búsqueda de Joyas garantiza cartas esenciales de Entrenador cada turno. A pesar de una curva de aprendizaje más pronunciada, este mazo logró múltiples Top 8 en Limitless y sigue siendo un arquetipo revelación."
     },
@@ -39,9 +39,9 @@
       "en": "Tank Terapagos ex relies on Unified Beatdown to do 30 damage per benched Pokémon, scaling into a huge late/game finisher once setup is complete. Crown Opal provides shielding and the Noctowl engine furnishes two Trainers per turn, granting consistency. Its high HP and diverse attacker suite earned solid online win rates in April 2025.",
       "es": "Tank Terapagos ex se basa en Golpe Unificado para infligir 30 de daño por cada Pokémon en banca, escalando hasta un gran finalizador tardío una vez completada la preparación. Ópalo de Corona proporciona escudo y el motor de Noctowl suministra dos Entrenadores por turno, otorgando consistencia. Su alta PS y diversa gama de atacantes le valieron sólidas tasas de victoria en línea en abril de 2025."
     },
-    "joltik/pikachu": {
-      "en": "The Joltik/Pikachu build accelerates Energy early with Joltik’s Crash and Crispy’s draw support, enabling Pikachu ex to one/hit KO most Stage 2 threats using Gravity Mountain. Secondary attackers like Iron Hands ex and Galvantula ex add versatility, while Prime Catcher offers critical board control. According to community data, Joltik Box ranks among the top contenders in the post/rotation meta due to its high conversion rates.",
-      "es": "La versión Joltik/Pikachu acelera Energía temprano con Choque de Joltik y soporte de robo de Crispy, permitiendo que Pikachu ex elimine de un golpe a la mayoría de las amenazas de Etapa 2 usando Montaña Gravedad. Atacantes secundarios como Iron Hands ex y Galvantula ex añaden versatilidad, mientras que Capturador Supremo ofrece control crítico del campo. Según datos de la comunidad, Joltik Box se posiciona entre los principales contendientes en el meta post-rotación debido a sus altas tasas de conversión."
+    "joltik-box": {
+      "en": "The joltik-box build accelerates Energy early with Joltik’s Crash and Crispy’s draw support, enabling Pikachu ex to one/hit KO most Stage 2 threats using Gravity Mountain. Secondary attackers like Iron Hands ex and Galvantula ex add versatility, while Prime Catcher offers critical board control. According to community data, Joltik Box ranks among the top contenders in the post/rotation meta due to its high conversion rates.",
+      "es": "La versión joltik-box acelera Energía temprano con Choque de Joltik y soporte de robo de Crispy, permitiendo que Pikachu ex elimine de un golpe a la mayoría de las amenazas de Etapa 2 usando Montaña Gravedad. Atacantes secundarios como Iron Hands ex y Galvantula ex añaden versatilidad, mientras que Capturador Supremo ofrece control crítico del campo. Según datos de la comunidad, Joltik Box se posiciona entre los principales contendientes en el meta post-rotación debido a sus altas tasas de conversión."
     }
   }
   

@@ -1,4 +1,5 @@
 [
+    { "slug": "milwaukee", "name": "Milwaukee",  "icon": "🏙️" },
     { "slug": "sevilla",    "name": "Sevilla",    "icon": "⚡️" },
     { "slug": "monterrey",  "name": "Monterrey",  "icon": "🏰" },
     { "slug": "atlanta",    "name": "Atlanta",    "icon": "🔥" }
