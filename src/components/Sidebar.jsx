@@ -8,13 +8,13 @@ export default function Sidebar({ isOpen }) {
         ${isOpen ? "block" : "hidden"}
         fixed inset-y-0 left-0
         w-56 p-4
-        bg-gradient-to-b from-red-600 to-white
-        border-r-4 border-black
+        bg-gradient-to-b from-blue-600 to-white
+        border-r-4 border-blue-800
         shadow-lg z-40
       `}
     >
       <nav>
-        <ul className="space-y-4">
+        <ul className="space-y-4 pt-[80px]">
           <li>
             <NavLink
               to="/"
@@ -22,8 +22,8 @@ export default function Sidebar({ isOpen }) {
               className={({ isActive }) =>
                 `flex items-center p-2 rounded-lg transition-colors ${
                   isActive
-                    ? "bg-yellow-300 text-black"
-                    : "text-white hover:bg-yellow-200 hover:text-black"
+                    ? "bg-blue-600 text-white"
+                    : "text-white hover:bg-blue-700 hover:text-white"
                 }`
               }
             >
@@ -38,8 +38,8 @@ export default function Sidebar({ isOpen }) {
                 className={({ isActive }) =>
                   `flex items-center p-2 rounded-lg transition-colors ${
                     isActive
-                      ? "bg-yellow-300 text-black"
-                      : "text-white hover:bg-yellow-200 hover:text-black"
+                      ? "bg-blue-600 text-white"
+                      : "text-white hover:bg-blue-700 hover:text-white"
                   }`
                 }
               >
