@@ -95,16 +95,29 @@ export default function GeneralStatsChart({ slug }) {
     );
   };
 
-  // Tarjeta de gráfica con interactividad
+  // Tarjeta de gráfica con interactividad y outerRadius responsivo
   const ChartCard = ({ title, data }) => {
     const [selectedDeck, setSelectedDeck] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Detectar tamaño de pantalla
+    useEffect(() => {
+      const handler = () => setIsMobile(window.innerWidth < 768);
+      handler();
+      window.addEventListener('resize', handler);
+      return () => window.removeEventListener('resize', handler);
+    }, []);
+
+    // Radios: inner siempre 0, outer 100 en mobile, 200 en desktop
+    const innerR = 0;
+    const outerR = isMobile ? 120 : 200;
 
     return (
       <div className="bg-white p-6 rounded-2xl shadow-xl">
         <h3 className="text-2xl font-semibold mb-4">{title}</h3>
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
           {/* Gráfico */}
-          <div className="w-2/3 h-[500px]">
+          <div className="w-full md:w-2/3 h-64 md:h-[500px]">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
@@ -113,8 +126,8 @@ export default function GeneralStatsChart({ slug }) {
                   nameKey="deck"
                   cx="50%"
                   cy="50%"
-                  innerRadius={50}
-                  outerRadius={250}
+                  innerRadius={innerR}
+                  outerRadius={outerR}
                   paddingAngle={2}
                   labelLine={false}
                   label={renderIconLabels}
@@ -132,13 +145,12 @@ export default function GeneralStatsChart({ slug }) {
               </PieChart>
             </ResponsiveContainer>
           </div>
-
           {/* Detalle Top 3 */}
-          <div className="w-1/3 pl-6">
+          <div className="w-full md:w-1/3 md:pl-6 mt-6 md:mt-0">
             {selectedDeck && top3[selectedDeck] ? (
               <div className="border p-4 rounded-md">
                 <h4 className="text-lg font-medium mb-2">
-                  Top 3 de {selectedDeck}
+                  Top 3 de {selectedDeck.replace(/\//g, ' ')}
                 </h4>
                 <ul>
                   {top3[selectedDeck].map(item => (
@@ -148,7 +160,6 @@ export default function GeneralStatsChart({ slug }) {
                     >
                       <span className="font-semibold">{item.rank}.</span>
                       <span className="flex-1 mx-2">{item.name}</span>
-                      {/* Icono clicable al deck */}
                       {deckIconsMap[selectedDeck]?.[0] && (
                         <a
                           href={item.decklist_link}
@@ -178,7 +189,7 @@ export default function GeneralStatsChart({ slug }) {
   return (
     <div>
       <h2 className="text-4xl font-bold mb-12">Estadística General</h2>
-      <div className="grid grid-cols-1 md:grid-cols-1 gap-12">
+      <div className="grid grid-cols-1 gap-12">
         <ChartCard title="Top 10 General" data={generalData} />
         <ChartCard title="Top 10 Día 2" data={day2Data} />
         <ChartCard title="Todos Topcut" data={topcutData} />

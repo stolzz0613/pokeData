@@ -1,0 +1,47 @@
+{
+    "dragapult/dusknoir": {
+      "en": "Dragapult/Dusknoir leverages Budew’s ability to provide early tempo and consistency, enabling Dragapult ex to take full advantage of Dusknoir’s Cursed Blast for prize trading and board control. Five Pults in the Top 8 at the Atlanta Regionals underscored the deck’s dominance in the post/rotation meta.",
+      "es": "Dragapult/Dusknoir aprovecha la habilidad de Budew para proporcionar tempo y consistencia temprana, lo que permite que Dragapult ex aproveche al máximo el Explosión Maldita de Dusknoir para el intercambio de premios y control de la mesa. Cinco Pults en el Top 8 de los Regionales de Atlanta subrayaron el dominio del mazo en el meta posterior a la rotación."
+    },
+    "dragapult": {
+      "en": "Pure Dragapult ex centers on Phantom Dive for 200 damage and bench spreading via Drakloak’s Recon Directive, offering both KO potential and prize denial. Key cards like Dusclops and Rare Candy accelerate setup into Dragapult ex, while budget ACE SPEC choices shore up consistency at top/level play.",
+      "es": "El Dragapult ex puro se centra en Buceo Fantasma para 200 de daño y en esparcir en la banca mediante la Directiva de Reconocimiento de Drakloak, ofreciendo tanto potencial de KO como negación de premios. Cartas clave como Dusclops y Dulce Raro aceleran la preparación de Dragapult ex, mientras que opciones económicas de ACE SPEC refuerzan la consistencia en el juego de alto nivel."
+    },
+    "raging-bolt/ogerpon": {
+      "en": "Raging Bolt ex harnesses Bellowing Thunder to scale damage by discarding Energy, with Teal Mask Ogerpon ex’s Teal Dance Ability providing reliable acceleration each turn. The combination of the Noctowl engine and tutor cards like Jewel Seeker yields consistent resource access, leading to strong finishes on the Limitless platform.",
+      "es": "Raging Bolt ex utiliza Trueno Rugiente para incrementar daño descartando Energía, mientras que la habilidad Baile Azul de Teal Mask Ogerpon ex proporciona aceleración fiable cada turno. La combinación del motor de Noctowl y cartas de tutor como Búsqueda de Joyas ofrece acceso constante a recursos, lo que resulta en actuaciones destacadas en la plataforma Limitless."
+    },
+    "gardevoir": {
+      "en": "Gardevoir ex has thrived post/rotation by using Lillie’s Clefairy ex in the Fairy Zone to one/shot Dragapult ex and regain KO power lost with Kirlia’s rotation. Innovative builds featuring N’s Zoroark ex for draw support have allowed the deck to outlast slow Budew mirrors and adapt to varied matchups.",
+      "es": "Gardevoir ex ha prosperado post-rotación usando a Clefairy ex de Lillie en la Zona Hada para eliminar de un golpe a Dragapult ex y recuperar el poder de KO perdido con la rotación de Kirlia. Construcciones innovadoras con Zoroark ex de N para soporte de robo han permitido que el mazo supere espejos lentos de Budew y se adapte a diversos enfrentamientos."
+    },
+    "gholdengo/dudunsparce": {
+      "en": "Gholdengo ex paired with Dudunsparce leverages Arven and Gimmighoul to set up quickly and then uses Make It Rain for high/damage prize trades. This archetype posts favorable matchups across the meta, trading Prizes efficiently while maintaining a robust late/game grind.",
+      "es": "Gholdengo ex junto a Dudunsparce aprovecha a Arven y Gimmighoul para prepararse rápidamente y luego utiliza Lluvia de Energía para intercambios de premios de alto daño. Este arquetipo presenta enfrentamientos favorables en todo el meta, intercambiando premios eficientemente mientras mantiene una sólida fase tardía."
+    },
+    "gholdengo/dragapult": {
+      "en": "The Gholdengo ex/Dragapult ex variant adds Phantom Dive for 200 damage and bench disruption to the standard Gholdengo package, further expanding matchup coverage. Its no/nonsense consistency and power level make it favored into virtually every meta deck, with only a few fringe counters posing a challenge.",
+      "es": "La variante Gholdengo ex/Dragapult ex añade Buceo Fantasma para 200 de daño y perturbación en banca al paquete estándar de Gholdengo, ampliando aún más la cobertura de enfrentamientos. Su consistencia directa y nivel de poder lo hacen favorito contra prácticamente cualquier mazo del meta, con solo algunos contraataques marginales como desafío."
+    },
+    "archaludon/brute-bonnet": {
+      "en": "Poison Archaludon ex leverages Brute Bonnet’s Poison Crowd to place eight damage counters on turn one and then uses stall tools like Relicanth to maintain board control. The deck holds a solid mid/tier performance in April 2025.",
+      "es": "Poison Archaludon ex aprovecha el Multitud Venenosa de Brute Bonnet para colocar ocho contadores de daño en el primer turno y luego utiliza herramientas de stall como Relicanth para mantener el control del campo. El mazo tuvo un desempeño sólido de nivel medio en abril de 2025."
+    },
+    "flareon/noctowl": {
+      "en": "Flareon ex/Noctowl employs Noctowl’s Jewel Seeker to tutor two Trainers upon evolution, ensuring consistent resource access for the aggressive two/Prize strategy. Flareon ex’s Burning Charge not only deals 130 damage but also accelerates two Basic Energy to any Pokémon, enabling early knockouts and tempo swings.",
+      "es": "Flareon ex/Noctowl utiliza Búsqueda de Joyas de Noctowl para tutorizar dos Cartas de Entrenador al evolucionar, asegurando acceso constante a recursos para la agresiva estrategia de dos premios. Carga Ardiente de Flareon ex no solo inflige 130 de daño sino que también acelera dos Energías Básicas a cualquier Pokémon, permitiendo eliminaciones tempranas y cambios de tempo."
+    },
+    "noctowl/ogerpon-wellspring": {
+      "en": "Tera Box uses Wellspring Mask Ogerpon ex’s Torrential Pump to hit two targets for prize pressure while the Noctowl engine via Jewel Seeker guarantees essential Trainer cards each turn. Despite a steeper learning curve, this deck posted multiple Top 8 finishes on Limitless and remains a breakout archetype.",
+      "es": "Tera Box usa Bomba Torrencial de Wellspring Mask Ogerpon ex para golpear dos objetivos y presionar premios, mientras que el motor de Noctowl mediante Búsqueda de Joyas garantiza cartas esenciales de Entrenador cada turno. A pesar de una curva de aprendizaje más pronunciada, este mazo logró múltiples Top 8 en Limitless y sigue siendo un arquetipo revelación."
+    },
+    "terapagos/noctowl": {
+      "en": "Tank Terapagos ex relies on Unified Beatdown to do 30 damage per benched Pokémon, scaling into a huge late/game finisher once setup is complete. Crown Opal provides shielding and the Noctowl engine furnishes two Trainers per turn, granting consistency. Its high HP and diverse attacker suite earned solid online win rates in April 2025.",
+      "es": "Tank Terapagos ex se basa en Golpe Unificado para infligir 30 de daño por cada Pokémon en banca, escalando hasta un gran finalizador tardío una vez completada la preparación. Ópalo de Corona proporciona escudo y el motor de Noctowl suministra dos Entrenadores por turno, otorgando consistencia. Su alta PS y diversa gama de atacantes le valieron sólidas tasas de victoria en línea en abril de 2025."
+    },
+    "joltik/pikachu": {
+      "en": "The Joltik/Pikachu build accelerates Energy early with Joltik’s Crash and Crispy’s draw support, enabling Pikachu ex to one/hit KO most Stage 2 threats using Gravity Mountain. Secondary attackers like Iron Hands ex and Galvantula ex add versatility, while Prime Catcher offers critical board control. According to community data, Joltik Box ranks among the top contenders in the post/rotation meta due to its high conversion rates.",
+      "es": "La versión Joltik/Pikachu acelera Energía temprano con Choque de Joltik y soporte de robo de Crispy, permitiendo que Pikachu ex elimine de un golpe a la mayoría de las amenazas de Etapa 2 usando Montaña Gravedad. Atacantes secundarios como Iron Hands ex y Galvantula ex añaden versatilidad, mientras que Capturador Supremo ofrece control crítico del campo. Según datos de la comunidad, Joltik Box se posiciona entre los principales contendientes en el meta post-rotación debido a sus altas tasas de conversión."
+    }
+  }
+  

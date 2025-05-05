@@ -8,12 +8,14 @@ import {
 } from 'react-router-dom';
 import DeckHeatmap from '../components/DeckHeatMap.jsx';
 import GeneralStats from './GeneralStats.jsx';
+import DeckRadarChart from '../components/DeckRadarChart.jsx';
 
 export default function TournamentPage() {
   const { tournament } = useParams();
   const slug = tournament.toLowerCase();
   const [csvText, setCsvText] = useState(null);
   const [summaryData, setSummaryData] = useState(null);
+  const [analysis, setAnalysis] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -27,6 +29,14 @@ export default function TournamentPage() {
       })
       .then(setCsvText)
       .catch(e => setError(e.message));
+    
+    fetch(`data/${slug}/analysis.json`)
+      .then(res => {
+        if (!res.ok) throw new Error('Analisis no encontrado');
+        return res.json();
+      })
+      .then(setAnalysis)
+      .catch(e => setError(e.message));
 
     // cargar JSON
     fetch(`data/${slug}/decks_summary.json`)
@@ -39,12 +49,12 @@ export default function TournamentPage() {
   }, [slug]);
 
   if (error) return <div className="text-red-600">Error: {error}</div>;
-  if (!csvText || !summaryData) return <div>Cargando datos…</div>;
+  if (!csvText || !summaryData || !analysis) return <div>Cargando datos…</div>;
 
   return (
     <div>
       {/* Navbar interna de pestañas */}
-      <nav className="flex space-x-4 mb-6 border-b pb-2">
+      <nav className="flex justify-center md:justify-start space-x-4 mb-8 border-b pb-4">
         <NavLink
           to=""
           end
@@ -67,24 +77,23 @@ export default function TournamentPage() {
           Heatmap
         </NavLink>
         <NavLink
-          to="analysis"
+          to="radarchart"
           className={({ isActive }) =>
             isActive
               ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
               : 'text-gray-600 hover:text-blue-600'
           }
         >
-          Análisis
+          Radar Chart
         </NavLink>
       </nav>
 
       {/* Aquí se renderiza la pestaña activa */}
-      <Outlet context={{ csvText, summaryData, slug }} />
+      <Outlet context={{ csvText, summaryData, slug, analysis }} />
     </div>
   );
 }
 
-// Subscripción para la pestaña Heatmap
 TournamentPage.Heatmap = function HeatmapTab() {
   const { csvText, summaryData, slug } = useOutletContext();
   return (
@@ -92,6 +101,18 @@ TournamentPage.Heatmap = function HeatmapTab() {
       key={slug}
       csvText={csvText}
       summaryData={summaryData}
+    />
+  );
+};
+
+TournamentPage.RadarChart = function RadarChartTab() {
+  const { csvText, summaryData, slug, analysis } = useOutletContext();
+  return (
+    <DeckRadarChart
+      key={slug}
+      csvText={csvText}
+      summaryData={summaryData}
+      analysis={analysis}
     />
   );
 };
