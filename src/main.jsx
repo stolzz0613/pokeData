@@ -17,6 +17,7 @@ createRoot(document.getElementById('root')).render(
              <Route path=":tournament" element={<TournamentPage />}>
                <Route path="heatmap" element={<TournamentPage.Heatmap />} />
                <Route path="radarchart" element={<TournamentPage.RadarChart />} />
+               <Route path="recommender" element={<TournamentPage.Recommender />} />
                <Route index element={<TournamentPage.GeneralStats />} />
              </Route>
            </Route>

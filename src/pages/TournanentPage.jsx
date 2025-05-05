@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import DeckHeatmap from '../components/DeckHeatMap.jsx';
 import GeneralStats from './GeneralStats.jsx';
 import DeckRadarChart from '../components/DeckRadarChart.jsx';
+import DeckRecommender from '../components/DeckRecommender.jsx';
 
 export default function TournamentPage() {
   const { tournament } = useParams();
@@ -100,6 +101,16 @@ export default function TournamentPage() {
           >
             Radar Chart
           </NavLink>
+          <NavLink
+            to="recommender"
+            className={({ isActive }) =>
+              isActive
+                ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
+                : 'text-gray-600 hover:text-blue-600'
+            }
+          >
+            Deck Recommender
+          </NavLink>
         </nav>
 
         {/* Aquí se renderiza la pestaña activa */}
@@ -125,6 +136,18 @@ TournamentPage.RadarChart = function RadarChartTab() {
   const { csvText, summaryData, slug, analysis } = useOutletContext();
   return (
     <DeckRadarChart
+      key={slug}
+      csvText={csvText}
+      summaryData={summaryData}
+      analysis={analysis}
+    />
+  );
+};
+
+TournamentPage.Recommender = function RecommenderTab() {
+  const { csvText, summaryData, slug, analysis } = useOutletContext();
+  return (
+    <DeckRecommender
       key={slug}
       csvText={csvText}
       summaryData={summaryData}

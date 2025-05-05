@@ -12,6 +12,7 @@ const routes = [
     `/#/${slug}`,            // GeneralStats
     `/#/${slug}/heatmap`,    // Heatmap
     `/#/${slug}/radarchart`, // RadarChart
+    `/#/${slug}/recommender`, // Recommender
   ]),
 ]
 
