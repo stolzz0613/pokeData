@@ -1,5 +1,4 @@
-// src/pages/GeneralStatsChart.jsx
-
+// src/pages/GeneralStats.jsx
 import React, { useState, useEffect, useMemo } from 'react';
 import {
   ResponsiveContainer,
@@ -9,55 +8,36 @@ import {
   Tooltip,
 } from 'recharts';
 
-// 1) Use `query: '?json'` instead of the deprecated `as: 'json'`
-const standingsModules = import.meta.glob(
-  '/src/data/*/standings.json',
-  { query: '?json' }
-);
-const top3Modules = import.meta.glob(
-  '/src/data/*/top3.json',
-  { query: '?json' }
-);
-
 export default function GeneralStatsChart({ slug }) {
   const [players, setPlayers] = useState(null);
   const [deckIconsMap, setDeckIconsMap] = useState({});
   const [top3, setTop3] = useState({});
   const [error, setError] = useState(null);
 
-  // 2) Dynamically load only the JSON for the current slug
+  // Cargar standings.json y deckIcons
   useEffect(() => {
-    setPlayers(null);
-    setError(null);
-
-    const standingsPath = `/src/data/${slug}/standings.json`;
-    const top3Path      = `/src/data/${slug}/top3.json`;
-
-    const loadStandings = standingsModules[standingsPath];
-    const loadTop3      = top3Modules[top3Path];
-
-    if (!loadStandings) {
-      setError('standings.json not found');
-      return;
-    }
-
-    loadStandings()
+    fetch(`data/${slug}/standings.json`)
+      .then(res => {
+        if (!res.ok) throw new Error('standings.json no encontrado');
+        return res.json();
+      })
       .then(data => {
         setPlayers(data.players);
         setDeckIconsMap(data.deckIcons || {});
       })
       .catch(err => setError(err.message));
 
-    if (loadTop3) {
-      loadTop3()
-        .then(data => setTop3(data))
-        .catch(() => console.warn('top3.json load failed'));
-    } else {
-      setTop3({});
-    }
+    // Cargar top3.json
+    fetch(`data/${slug}/top3.json`)
+      .then(res => {
+        if (!res.ok) throw new Error('top3.json no encontrado');
+        return res.json();
+      })
+      .then(setTop3)
+      .catch(err => console.warn(err.message));
   }, [slug]);
 
-  // 3) Prepare chart data
+  // Agrupa y ordena
   const makeChartData = (statusFilter, topN = Infinity) => {
     if (!players) return [];
     const countMap = {};
@@ -76,8 +56,8 @@ export default function GeneralStatsChart({ slug }) {
   const day2Data    = useMemo(() => makeChartData('day2', 10), [players]);
   const topcutData  = useMemo(() => makeChartData('topcut'), [players]);
 
-  if (error)    return <div className="text-red-600">Error: {error}</div>;
-  if (!players) return <div>Loading statistics…</div>;
+  if (error) return <div className="text-red-600">Error: {error}</div>;
+  if (!players) return <div>Cargando estadísticas…</div>;
 
   const COLORS = [
     '#8884d8', '#8dd1e1', '#ffc658', '#ff8042',
@@ -85,7 +65,7 @@ export default function GeneralStatsChart({ slug }) {
     '#ffc0cb', '#8b008b'
   ];
 
-  // 4) Render deck icons around each pie slice
+  // Render de iconos dentro de cada slice
   const renderIconLabels = ({
     cx, cy, midAngle, innerRadius, outerRadius, payload
   }) => {
@@ -115,11 +95,12 @@ export default function GeneralStatsChart({ slug }) {
     );
   };
 
-  // 5) ChartCard sub-component
-  function ChartCard({ title, data }) {
+  // Tarjeta de gráfica con interactividad y outerRadius responsivo
+  const ChartCard = ({ title, data }) => {
     const [selectedDeck, setSelectedDeck] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
 
+    // Detectar tamaño de pantalla
     useEffect(() => {
       const handler = () => setIsMobile(window.innerWidth < 768);
       handler();
@@ -127,6 +108,7 @@ export default function GeneralStatsChart({ slug }) {
       return () => window.removeEventListener('resize', handler);
     }, []);
 
+    // Radios: inner siempre 0, outer 100 en mobile, 200 en desktop
     const innerR = 0;
     const outerR = isMobile ? 120 : 200;
 
@@ -134,7 +116,7 @@ export default function GeneralStatsChart({ slug }) {
       <div className="bg-white p-6 rounded-2xl shadow-xl">
         <h3 className="text-2xl font-semibold mb-4">{title}</h3>
         <div className="flex flex-col md:flex-row">
-          {/* Pie chart */}
+          {/* Gráfico */}
           <div className="w-full md:w-2/3 h-64 md:h-[500px]">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -163,13 +145,12 @@ export default function GeneralStatsChart({ slug }) {
               </PieChart>
             </ResponsiveContainer>
           </div>
-
-          {/* Top 3 list */}
+          {/* Detalle Top 3 */}
           <div className="w-full md:w-1/3 md:pl-6 mt-6 md:mt-0">
             {selectedDeck && top3[selectedDeck] ? (
               <div className="border p-4 rounded-md">
                 <h4 className="text-lg font-medium mb-2">
-                  Top 3 of {selectedDeck.replace(/\//g, ' ')}
+                  Top 3 de {selectedDeck.replace(/\//g, ' ')}
                 </h4>
                 <ul>
                   {top3[selectedDeck].map(item => (
@@ -197,22 +178,21 @@ export default function GeneralStatsChart({ slug }) {
                 </ul>
               </div>
             ) : (
-              <div className="text-gray-500">Click on a slice…</div>
+              <div className="text-gray-500">Haz click en una sección…</div>
             )}
           </div>
         </div>
       </div>
     );
-  }
+  };
 
-  // 6) Final render
   return (
     <div>
-      <h2 className="text-4xl font-bold mb-12">General Statistics</h2>
+      <h2 className="text-4xl font-bold mb-12">Estadística General</h2>
       <div className="grid grid-cols-1 gap-12">
-        <ChartCard title="Top 10 Overall" data={generalData} />
-        <ChartCard title="Top 10 Day 2"   data={day2Data}    />
-        <ChartCard title="All Topcut"      data={topcutData}  />
+        <ChartCard title="Top 10 General" data={generalData} />
+        <ChartCard title="Top 10 Día 2" data={day2Data} />
+        <ChartCard title="Todos Topcut" data={topcutData} />
       </div>
     </div>
   );
