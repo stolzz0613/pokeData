@@ -14,7 +14,9 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.5",
     "html-to-image": "^1.11.13",
+    "html2canvas": "^1.4.1",
     "papaparse": "^5.5.2",
+    "pokemontcgsdk": "^2.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-helmet-async": "^2.0.5",
