@@ -1,10 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { toPng } from 'html-to-image';
+import html2canvas from 'html2canvas';
 
 export default function DeckParser() {
   const [inputText, setInputText] = useState('');
   const [parsed, setParsed] = useState([]);
-  const [apiCards, setApiCards] = useState([]);  // will hold cards with imgData
+  const [apiCards, setApiCards] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const gridRef = useRef(null);
@@ -17,13 +18,11 @@ export default function DeckParser() {
     for (let raw of lines) {
       const line = raw.trim();
       if (!line) continue;
-
       const headerMatch = line.match(/^([^:]+):\s*(\d+)/);
       if (headerMatch) {
         currentSection = headerMatch[1]; // "Pokémon", "Trainer", "Energy"
         continue;
       }
-
       const parts = line.split(/\s+/);
       const count = parseInt(parts[0], 10);
       const set = parts[parts.length - 2];
@@ -46,28 +45,14 @@ export default function DeckParser() {
 
     setLoading(true);
     try {
-      // 1) fetch card data from API
+      // fetch card metadata from API
       const q = items.map(c => `${c.set}~${c.num}`).join(',');
-      const res = await fetch(`https://limitlesstcg.com/api/labs/cards?q=${encodeURIComponent(q)}`);
+      const res = await fetch(
+        `https://limitlesstcg.com/api/labs/cards?q=${encodeURIComponent(q)}`
+      );
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-
-      // 2) for each card, fetch the image and convert to Data-URL
-      const cardsWithData = await Promise.all(
-        data.map(async card => {
-          const padded = card.number.padStart(3, '0');
-          const imgUrl = `https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpci/${card.set}/${card.set}_${padded}_R_EN_XS.png`;
-          const blob = await fetch(imgUrl).then(r => r.blob());
-          const imgData = await new Promise(resolve => {
-            const reader = new FileReader();
-            reader.onloadend = () => resolve(reader.result);
-            reader.readAsDataURL(blob);
-          });
-          return { ...card, imgData };
-        })
-      );
-
-      setApiCards(cardsWithData);
+      setApiCards(data);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -108,28 +93,49 @@ export default function DeckParser() {
       .catch(() => alert('Error al copiar deck.'));
   }
 
-  function handleDownload() {
-    if (!gridRef.current) return;
-    toPng(gridRef.current, { cacheBust: true })
-      .then(dataUrl => {
-        const link = document.createElement('a');
-        link.download = 'deck.png';
-        link.href = dataUrl;
-        link.click();
-      })
-      .catch(err => console.error('Error generando imagen:', err));
+  function isSafari() {
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   }
 
-  // calculate total price in dollars
+  function handleDownload() {
+    if (!gridRef.current) return;
+    if (isSafari()) {
+      html2canvas(gridRef.current, {
+        useCORS: true,
+        allowTaint: false,
+        backgroundColor: '#ffffff',
+      })
+        .then(canvas => {
+          const link = document.createElement('a');
+          link.download = 'deck.png';
+          link.href = canvas.toDataURL('image/png');
+          link.click();
+        })
+        .catch(err => console.error('html2canvas error:', err));
+    } else {
+      toPng(gridRef.current, { cacheBust: true })
+        .then(dataUrl => {
+          const link = document.createElement('a');
+          link.download = 'deck.png';
+          link.href = dataUrl;
+          link.click();
+        })
+        .catch(err => console.error('html-to-image error:', err));
+    }
+  }
+
+  // calculate total price
   const totalCents = parsed.reduce((sum, item) => {
-    const card = apiCards.find(c => c.set === item.set && c.number === String(item.num));
+    const card = apiCards.find(
+      c => c.set === item.set && c.number === String(item.num)
+    );
     return sum + (card?.market_price ?? 0) * item.count;
   }, 0);
   const totalSum = (totalCents / 100).toFixed(2);
 
   return (
     <div className="max-w-7xl mx-auto p-4">
-      <div className="flex items-center justify-between mb-2">
+      <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-bold">Precio total del mazo: ${totalSum}</h2>
         <div className="flex gap-2">
           <button
@@ -137,7 +143,6 @@ export default function DeckParser() {
             className="p-2 bg-yellow-500 rounded hover:bg-yellow-600"
             title="Copiar deck"
           >
-            {/* Copy icon */}
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none"
               viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -149,7 +154,6 @@ export default function DeckParser() {
             className="p-2 bg-green-500 rounded hover:bg-green-600"
             title="Descargar imagen"
           >
-            {/* Download icon */}
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none"
               viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -178,15 +182,20 @@ export default function DeckParser() {
 
       <div
         ref={gridRef}
-        className="mt-4 grid grid-cols-4 md:grid-cols-8 gap-4 bg-white p-4 rounded"
+        className="mt-6 grid grid-cols-4 md:grid-cols-8 gap-4 bg-white p-4 rounded"
         style={{ backgroundColor: '#ffffff', color: '#000000' }}
       >
         {parsed.map((item, index) => {
-          const card = apiCards.find(c => c.set === item.set && c.number === String(item.num));
+          const card = apiCards.find(
+            c => c.set === item.set && c.number === String(item.num)
+          );
+          const imgUrl = `https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpci/${item.set}/${item.set}_${String(item.num).padStart(3,'0')}_R_EN_XS.png`;
+          // use a public CORS proxy to avoid cross-origin fetch
+          const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(imgUrl);
           const totalPrice = ((card?.market_price ?? 0) * item.count / 100).toFixed(2);
+
           return (
             <div key={`${item.set}-${item.num}`} className="relative text-center">
-              {/* Remove button */}
               <button
                 onClick={() => removeCard(index)}
                 className="absolute top-1 right-1 p-1 bg-red-500 rounded-full hover:bg-red-600"
@@ -199,14 +208,13 @@ export default function DeckParser() {
                 </svg>
               </button>
 
-              {/* Total price for this card */}
               <div className="mb-1 bg-white bg-opacity-80 text-xs py-1">
                 ${totalPrice}
               </div>
 
-              {/* Render the Data-URL image */}
               <img
-                src={card?.imgData}
+                src={proxyUrl}
+                crossOrigin="anonymous"
                 alt={card?.name ?? 'No encontrada'}
                 className={`mx-auto max-w-[136px] max-h-[189px] object-contain ${
                   item.count === 0 ? 'filter grayscale' : ''
