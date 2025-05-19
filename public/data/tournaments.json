@@ -3,5 +3,7 @@
     { "slug": "sevilla",    "name": "Sevilla",    "icon": "⚡️" },
     { "slug": "monterrey",  "name": "Monterrey",  "icon": "🏰" },
     { "slug": "atlanta",    "name": "Atlanta",    "icon": "🔥" },
-    { "slug": "melbourne", "name": "Melbourne",  "icon": "🏖️" }
+    { "slug": "melbourne", "name": "Melbourne",  "icon": "🏖️" },
+    { "slug": "santiago",   "name": "Santiago",   "icon": "🌋" },
+    { "slug": "utrecht",    "name": "Utrecht",    "icon": "🏰" }
 ]
