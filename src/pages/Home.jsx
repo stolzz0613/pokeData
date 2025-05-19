@@ -2,13 +2,20 @@ import React, { useState, useRef } from 'react';
 import { toPng } from 'html-to-image';
 import html2canvas from 'html2canvas';
 import pokemon from 'pokemontcgsdk';
+import {
+  ClipboardIcon,
+  ArrowDownTrayIcon,
+  TrashIcon,
+  MinusSmallIcon,
+  PlusSmallIcon
+} from '@heroicons/react/24/outline';
 
 // Configura tu API key
 pokemon.configure({ apiKey: 'b15c5d63-aa96-46b8-9032-b4c29ddb3f10' });
 
 export default function DeckParser() {
   const [inputText, setInputText] = useState('');
-  const [cardItems, setCardItems] = useState([]); // { count, name, set, num, section, imgData, unitPrice }
+  const [cardItems, setCardItems] = useState([]); // enriched items
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const gridRef = useRef(null);
@@ -44,33 +51,47 @@ export default function DeckParser() {
     }
     setLoading(true);
     try {
-      // 1) Mapea cada ptcgoCode a su id interno usando .where()
+      // 1) Obtener precios de limitlesstcg
+      const qPrice = items.map(i => `${i.set}~${i.num}`).join(',');
+      const resPrice = await fetch(
+        `https://limitlesstcg.com/api/labs/cards?q=${encodeURIComponent(qPrice)}`
+      );
+      if (!resPrice.ok) throw new Error(`HTTP ${resPrice.status}`);
+      const priceData = await resPrice.json(); 
+      // priceData: [{ set, number, market_price }, ...]
+
+      // 2) Mapear cada ptcgoCode a su id interno
       const codes = [...new Set(items.map(i => i.set))];
       const codeToId = {};
       await Promise.all(codes.map(async code => {
-        const res = await pokemon.set.where({
+        const resSet = await pokemon.set.where({
           q: `legalities.standard:legal ptcgoCode:${code}`
         });
-        // res.data es un array de sets
-        const setObj = res.data.find(s => s.ptcgoCode === code);
+        const arr = Array.isArray(resSet.data) ? resSet.data : [];
+        const setObj = arr.find(s => s.ptcgoCode === code);
         if (setObj) codeToId[code] = setObj.id;
       }));
 
-      // 2) Para cada carta, fetch via SDK con set.id y number
+      // 3) Enriquecer cada item con imagen y precio
       const enriched = await Promise.all(items.map(async item => {
+        // precio en centavos
+        const priceEntry = priceData.find(
+          p => p.set === item.set && p.number === String(item.num)
+        );
+        const market_price = priceEntry?.market_price ?? 0;
+
+        // buscar carta en SDK
         const setId = codeToId[item.set];
         let sdkCard = null;
         if (setId) {
-          const res = await pokemon.card.where({
+          const resCard = await pokemon.card.where({
             q: `set.id:${setId} number:${item.num}`
           });
-          sdkCard = res.data[0] || null;
+          const arrCard = Array.isArray(resCard.data) ? resCard.data : [];
+          sdkCard = arrCard[0] || null;
         }
 
-        // unitPrice en dólares
-        const unitPrice = sdkCard?.tcgplayer?.prices?.holofoil?.market ?? 0;
-
-        // convierte imagen a Data-URL
+        // convertir imagen pequeña a Data-URL
         let imgData = '';
         const imageUrl = sdkCard?.images?.small;
         if (imageUrl) {
@@ -86,7 +107,7 @@ export default function DeckParser() {
           }
         }
 
-        return { ...item, imgData, unitPrice };
+        return { ...item, market_price, imgData };
       }));
 
       setCardItems(enriched);
@@ -123,8 +144,8 @@ export default function DeckParser() {
       lines.push('');
     });
     navigator.clipboard.writeText(lines.join('\n').trim())
-      .then(() => alert('¡Deck copiado al portapapeles!'))
-      .catch(() => alert('Error al copiar deck.'));
+      .then(() => {})
+      .catch(() => {});
   }
 
   function isSafari() {
@@ -154,9 +175,10 @@ export default function DeckParser() {
     }
   }
 
-  const total = cardItems
-    .reduce((sum, c) => sum + c.unitPrice * c.count, 0)
-    .toFixed(2);
+  const total = (
+    cardItems.reduce((sum, c) => sum + c.market_price * c.count, 0)
+    / 100
+  ).toFixed(2);
 
   return (
     <div className="max-w-7xl mx-auto p-4">
@@ -168,31 +190,21 @@ export default function DeckParser() {
             className="p-2 bg-yellow-500 rounded hover:bg-yellow-600"
             title="Copiar deck"
           >
-            {/* Copy icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2M16 8l4 4m0 0l-4 4m4-4H8" />
-            </svg>
+            <ClipboardIcon className="h-6 w-6 text-white" />
           </button>
           <button
             onClick={handleDownload}
             className="p-2 bg-green-500 rounded hover:bg-green-600"
             title="Descargar imagen"
           >
-            {/* Download icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-            </svg>
+            <ArrowDownTrayIcon className="h-6 w-6 text-white" />
           </button>
         </div>
       </div>
 
       <textarea
         className="w-full h-48 p-2 font-mono text-sm border border-gray-300 rounded"
-        placeholder="Pega aquí tu deck list…"
+        placeholder="Pega aquí tu decklist…"
         value={inputText}
         onChange={e => setInputText(e.target.value)}
       />
@@ -216,18 +228,15 @@ export default function DeckParser() {
             <button
               onClick={() => removeCard(i)}
               className="absolute top-1 right-1 p-1 bg-red-500 rounded-full hover:bg-red-600"
-              title="Eliminar"
+              title="Eliminar carta"
             >
-              {/* Delete icon */}
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M1 7h22M8 7V4a1 1 0 011-1h6a1 1 0 011 1v3" />
-              </svg>
+              <TrashIcon className="h-4 w-4 text-white" />
             </button>
+
             <div className="mb-1 bg-white bg-opacity-80 text-xs py-1">
-              ${(c.unitPrice * c.count).toFixed(2)}
+              ${(c.market_price * c.count / 100).toFixed(2)}
             </div>
+
             {c.imgData ? (
               <img
                 src={c.imgData}
@@ -238,22 +247,23 @@ export default function DeckParser() {
               />
             ) : (
               <div className="mx-auto w-[136px] h-[189px] bg-gray-100 flex items-center justify-center text-sm text-gray-500">
-                No image
+                Sin imagen
               </div>
             )}
+
             <div className="mt-1 font-bold">{c.count}</div>
             <div className="mt-1 flex justify-center gap-1">
               <button
                 onClick={() => updateCount(i, -1)}
                 className="w-6 h-6 bg-gray-200 rounded hover:bg-gray-300 flex items-center justify-center"
               >
-                −
+                <MinusSmallIcon className="h-6 w-6 text-gray-600" />
               </button>
               <button
                 onClick={() => updateCount(i, +1)}
                 className="w-6 h-6 bg-gray-200 rounded hover:bg-gray-300 flex items-center justify-center"
               >
-                +
+                <PlusSmallIcon className="h-6 w-6 text-gray-600" />
               </button>
             </div>
           </div>
