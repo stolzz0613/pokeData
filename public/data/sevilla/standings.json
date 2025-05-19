@@ -2072,7 +2072,7 @@
     },
     {
       "name": "Alejandro Funes",
-      "deck": "feraligatr-tef",
+      "deck": "feraligatr",
       "status": "dnq"
     },
     {
@@ -2387,7 +2387,7 @@
     },
     {
       "name": "Borja Carracedo PÃ©rez",
-      "deck": "feraligatr-tef",
+      "deck": "feraligatr",
       "status": "dnq"
     },
     {
@@ -2522,7 +2522,7 @@
     },
     {
       "name": "Alisa GarcÃ­a",
-      "deck": "feraligatr-tef",
+      "deck": "feraligatr",
       "status": "dnq"
     },
     {
@@ -2699,7 +2699,7 @@
     "gouging-fire-ex": [
       "https://r2.limitlesstcg.net/pokemon/gen9/gouging-fire.png"
     ],
-    "feraligatr-tef": [
+    "feraligatr": [
       "https://r2.limitlesstcg.net/pokemon/gen9/feraligatr.png"
     ],
     "mimikyu-ogerpon": [

@@ -1042,7 +1042,7 @@
     },
     {
       "name": "Kia Yang",
-      "deck": "feraligatr-tef",
+      "deck": "feraligatr",
       "status": "day2"
     },
     {
@@ -1297,7 +1297,7 @@
     },
     {
       "name": "Abel Zavala",
-      "deck": "feraligatr-tef",
+      "deck": "feraligatr",
       "status": "day2"
     },
     {
@@ -2652,7 +2652,7 @@
       "https://r2.limitlesstcg.net/pokemon/gen9/terapagos.png",
       "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png"
     ],
-    "feraligatr-tef": [
+    "feraligatr": [
       "https://r2.limitlesstcg.net/pokemon/gen9/feraligatr.png"
     ],
     "gouging-fire-ex": [
