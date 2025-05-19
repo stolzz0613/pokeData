@@ -192,7 +192,6 @@ export default function DeckParser() {
                 className={`mx-auto max-w-[136px] max-h-[189px] w-auto h-auto object-contain ${
                   item.count === 0 ? 'filter grayscale' : ''
                 }`}
-                crossOrigin="anonymous"
               />
 
               <div className="mt-1 font-bold">{item.count}</div>
