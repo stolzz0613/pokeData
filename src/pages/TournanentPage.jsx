@@ -69,7 +69,7 @@ export default function TournamentPage() {
 
       <div>
         {/* Navbar interna de pestañas */}
-        <nav className="flex justify-center md:justify-start space-x-4 mb-8 border-b pb-4">
+        <nav className="pl-[60px] text-[12px] flex justify-center md:justify-start space-x-4 mb-8 border-b pb-4">
           <NavLink
             to=""
             end

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { toPng } from 'html-to-image';
-import html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas-pro';
 import pokemon from 'pokemontcgsdk';
 import {
   ClipboardIcon,
@@ -221,7 +221,7 @@ export default function DeckParser() {
 
       <div
         ref={gridRef}
-        className="mt-6 grid grid-cols-4 md:grid-cols-8 gap-4 bg-white p-4 rounded"
+        className="mt-6 grid grid-cols-3 md:grid-cols-8 gap-4 bg-white p-4 rounded"
       >
         {cardItems.map((c, i) => (
           <div key={`${c.set}-${c.num}`} className="relative text-center">
@@ -241,7 +241,7 @@ export default function DeckParser() {
               <img
                 src={c.imgData}
                 alt={c.name}
-                className={`mx-auto max-w-[136px] max-h-[189px] object-contain ${
+                className={`mx-auto max-w-[100px] md:max-w-[136px] md:max-h-[189px] object-contain ${
                   c.count === 0 ? 'filter grayscale' : ''
                 }`}
               />

@@ -15,7 +15,7 @@
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.1.5",
     "html-to-image": "^1.11.13",
-    "html2canvas": "^1.4.1",
+    "html2canvas-pro": "^1.5.11",
     "papaparse": "^5.5.2",
     "pokemontcgsdk": "^2.0.0",
     "react": "^19.0.0",

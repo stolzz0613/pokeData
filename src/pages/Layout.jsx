@@ -12,7 +12,7 @@ export default function Layout() {
 
   return (
     <div className="flex h-screen w-full px-0">
-      <Sidebar isOpen={isSidebarOpen} />
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       <main className="flex-1 bg-white p-4 overflow-auto relative md:px-[100px]">
         {/* Poké Ball Toggle Button */}
