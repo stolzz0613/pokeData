@@ -4,7 +4,7 @@ import { toPng } from 'html-to-image';
 export default function DeckParser() {
   const [inputText, setInputText] = useState('');
   const [parsed, setParsed] = useState([]);
-  const [apiCards, setApiCards] = useState([]);
+  const [apiCards, setApiCards] = useState([]);  // will hold cards with imgData
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const gridRef = useRef(null);
@@ -17,11 +17,13 @@ export default function DeckParser() {
     for (let raw of lines) {
       const line = raw.trim();
       if (!line) continue;
+
       const headerMatch = line.match(/^([^:]+):\s*(\d+)/);
       if (headerMatch) {
-        currentSection = headerMatch[1];
+        currentSection = headerMatch[1]; // "Pokémon", "Trainer", "Energy"
         continue;
       }
+
       const parts = line.split(/\s+/);
       const count = parseInt(parts[0], 10);
       const set = parts[parts.length - 2];
@@ -41,14 +43,31 @@ export default function DeckParser() {
       setError('No se detectaron líneas válidas.');
       return;
     }
-    const q = items.map(c => `${c.set}~${c.num}`).join(',');
-    const url = `https://limitlesstcg.com/api/labs/cards?q=${encodeURIComponent(q)}`;
 
     setLoading(true);
     try {
-      const res = await fetch(url);
+      // 1) fetch card data from API
+      const q = items.map(c => `${c.set}~${c.num}`).join(',');
+      const res = await fetch(`https://limitlesstcg.com/api/labs/cards?q=${encodeURIComponent(q)}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      setApiCards(await res.json());
+      const data = await res.json();
+
+      // 2) for each card, fetch the image and convert to Data-URL
+      const cardsWithData = await Promise.all(
+        data.map(async card => {
+          const padded = card.number.padStart(3, '0');
+          const imgUrl = `https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpci/${card.set}/${card.set}_${padded}_R_EN_XS.png`;
+          const blob = await fetch(imgUrl).then(r => r.blob());
+          const imgData = await new Promise(resolve => {
+            const reader = new FileReader();
+            reader.onloadend = () => resolve(reader.result);
+            reader.readAsDataURL(blob);
+          });
+          return { ...card, imgData };
+        })
+      );
+
+      setApiCards(cardsWithData);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -59,9 +78,7 @@ export default function DeckParser() {
   function updateCount(index, delta) {
     setParsed(prev =>
       prev.map((item, i) =>
-        i === index
-          ? { ...item, count: Math.max(0, item.count + delta) }
-          : item
+        i === index ? { ...item, count: Math.max(0, item.count + delta) } : item
       )
     );
   }
@@ -73,6 +90,7 @@ export default function DeckParser() {
   function handleCopy() {
     const sectionsOrder = ['Pokémon', 'Trainer', 'Energy'];
     const lines = [];
+
     sectionsOrder.forEach(sec => {
       const sectionItems = parsed.filter(i => i.section === sec);
       if (!sectionItems.length) return;
@@ -83,6 +101,7 @@ export default function DeckParser() {
       });
       lines.push('');
     });
+
     const deckText = lines.join('\n').trim();
     navigator.clipboard.writeText(deckText)
       .then(() => alert('¡Deck copiado al portapapeles!'))
@@ -101,6 +120,7 @@ export default function DeckParser() {
       .catch(err => console.error('Error generando imagen:', err));
   }
 
+  // calculate total price in dollars
   const totalCents = parsed.reduce((sum, item) => {
     const card = apiCards.find(c => c.set === item.set && c.number === String(item.num));
     return sum + (card?.market_price ?? 0) * item.count;
@@ -117,7 +137,7 @@ export default function DeckParser() {
             className="p-2 bg-yellow-500 rounded hover:bg-yellow-600"
             title="Copiar deck"
           >
-            {/* Icono de copiar */}
+            {/* Copy icon */}
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none"
               viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -129,7 +149,7 @@ export default function DeckParser() {
             className="p-2 bg-green-500 rounded hover:bg-green-600"
             title="Descargar imagen"
           >
-            {/* Icono de descarga */}
+            {/* Download icon */}
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none"
               viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -158,23 +178,20 @@ export default function DeckParser() {
 
       <div
         ref={gridRef}
-        className="mt-4 grid grid-cols-3 md:grid-cols-8 gap-4 bg-white p-4 rounded"
+        className="mt-4 grid grid-cols-4 md:grid-cols-8 gap-4 bg-white p-4 rounded"
         style={{ backgroundColor: '#ffffff', color: '#000000' }}
       >
         {parsed.map((item, index) => {
-          const cardData = apiCards.find(c => c.set === item.set && c.number === String(item.num));
-          const padded = String(item.num).padStart(3, '0');
-          const imgUrl = `https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpci/${item.set}/${item.set}_${padded}_R_EN_XS.png`;
-          const totalPrice = ((cardData?.market_price ?? 0) * item.count / 100).toFixed(2);
-
+          const card = apiCards.find(c => c.set === item.set && c.number === String(item.num));
+          const totalPrice = ((card?.market_price ?? 0) * item.count / 100).toFixed(2);
           return (
-            <div key={`${item.set}-${item.num}`} className="text-center relative">
+            <div key={`${item.set}-${item.num}`} className="relative text-center">
+              {/* Remove button */}
               <button
                 onClick={() => removeCard(index)}
                 className="absolute top-1 right-1 p-1 bg-red-500 rounded-full hover:bg-red-600"
                 title="Eliminar carta"
               >
-                {/* Icono de basura */}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" fill="none"
                   viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -182,14 +199,16 @@ export default function DeckParser() {
                 </svg>
               </button>
 
+              {/* Total price for this card */}
               <div className="mb-1 bg-white bg-opacity-80 text-xs py-1">
                 ${totalPrice}
               </div>
 
+              {/* Render the Data-URL image */}
               <img
-                src={imgUrl}
-                alt={cardData?.name ?? 'No encontrada'}
-                className={`mx-auto max-w-[136px] max-h-[189px] w-auto h-auto object-contain ${
+                src={card?.imgData}
+                alt={card?.name ?? 'No encontrada'}
+                className={`mx-auto max-w-[136px] max-h-[189px] object-contain ${
                   item.count === 0 ? 'filter grayscale' : ''
                 }`}
               />
