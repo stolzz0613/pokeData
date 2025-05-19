@@ -2187,7 +2187,7 @@
     },
     {
       "name": "Marcelo Vazquez",
-      "deck": "feraligatr-tef",
+      "deck": "feraligatr",
       "status": "dnq"
     },
     {
@@ -2679,7 +2679,7 @@
     "palafin-ex": [
       "https://r2.limitlesstcg.net/pokemon/gen9/palafin-hero.png"
     ],
-    "feraligatr-tef": [
+    "feraligatr": [
       "https://r2.limitlesstcg.net/pokemon/gen9/feraligatr.png"
     ]
   }
