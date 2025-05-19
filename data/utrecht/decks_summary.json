@@ -1,0 +1,272 @@
+{
+  "dragapult-ex": {
+    "count": 72,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png"
+    ]
+  },
+  "raging-bolt-ogerpon": {
+    "count": 64,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/raging-bolt.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon.png"
+    ]
+  },
+  "dragapult-dusknoir": {
+    "count": 23,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/dusknoir.png"
+    ]
+  },
+  "n-zoroark": {
+    "count": 20,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/zoroark.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/darmanitan.png"
+    ]
+  },
+  "dragapult-charizard": {
+    "count": 20,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/charizard.png"
+    ]
+  },
+  "gardevoir-ex-sv": {
+    "count": 75,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/gardevoir.png"
+    ]
+  },
+  "roaring-moon-ex": {
+    "count": 7,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/roaring-moon.png"
+    ]
+  },
+  "tera-box": {
+    "count": 24,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon-wellspring.png"
+    ]
+  },
+  "joltik-box": {
+    "count": 49,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/joltik.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/pikachu.png"
+    ]
+  },
+  "gholdengo-dragapult": {
+    "count": 29,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/gholdengo.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png"
+    ]
+  },
+  "roaring-moon-dudunsparce": {
+    "count": 11,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/roaring-moon.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/dudunsparce.png"
+    ]
+  },
+  "froslass-munkidori": {
+    "count": 9,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/froslass.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/munkidori.png"
+    ]
+  },
+  "okidogi-twm": {
+    "count": 3,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/okidogi.png"
+    ]
+  },
+  "greninja-blaziken": {
+    "count": 3,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/greninja.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/blaziken.png"
+    ]
+  },
+  "terapagos-noctowl": {
+    "count": 6,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/terapagos.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png"
+    ]
+  },
+  "gholdengo-ex": {
+    "count": 16,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/gholdengo.png"
+    ]
+  },
+  "flareon-noctowl": {
+    "count": 16,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/flareon.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png"
+    ]
+  },
+  "charizard-dusknoir": {
+    "count": 3,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/charizard.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/dusknoir.png"
+    ]
+  },
+  "charizard-pidgeot": {
+    "count": 5,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/charizard.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/pidgeot.png"
+    ]
+  },
+  "milotic-farigiraf": {
+    "count": 6,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/milotic.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/farigiraf.png"
+    ]
+  },
+  "hydreigon-ex": {
+    "count": 5,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/hydreigon.png"
+    ]
+  },
+  "charizard-noctowl": {
+    "count": 2,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/charizard.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png"
+    ]
+  },
+  "blissey-ex": {
+    "count": 1,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/blissey.png"
+    ]
+  },
+  "gholdengo-dudunsparce": {
+    "count": 5,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/gholdengo.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/dudunsparce.png"
+    ]
+  },
+  "slowking-scr": {
+    "count": 2,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/slowking.png"
+    ]
+  },
+  "poison-archaludon": {
+    "count": 7,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/archaludon.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/brute-bonnet.png"
+    ]
+  },
+  "other": {
+    "count": 2,
+    "icons": [
+      "https://limitless3.nyc3.cdn.digitaloceanspaces.com/pokemon/substitute.png"
+    ]
+  },
+  "iron-hands-ex": {
+    "count": 2,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/iron-hands.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/iron-crown.png"
+    ]
+  },
+  "pidgeot-control": {
+    "count": 2,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/pidgeot.png"
+    ]
+  },
+  "slaking-ex": {
+    "count": 1,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/slaking.png"
+    ]
+  },
+  "charizard-ex": {
+    "count": 1,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/charizard.png"
+    ]
+  },
+  "ceruledge-ex": {
+    "count": 4,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/ceruledge.png"
+    ]
+  },
+  "hop-zacian": {
+    "count": 1,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/zacian-crowned.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/snorlax.png"
+    ]
+  },
+  "archaludon-ex": {
+    "count": 4,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/archaludon.png"
+    ]
+  },
+  "archaludon-zoroark": {
+    "count": 5,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/archaludon.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/zoroark.png"
+    ]
+  },
+  "iron-thorns-ex": {
+    "count": 1,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/iron-thorns.png"
+    ]
+  },
+  "toedscruel-ex": {
+    "count": 1,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/toedscruel.png"
+    ]
+  },
+  "hydrapple-ogerpon": {
+    "count": 2,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/hydrapple.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon.png"
+    ]
+  },
+  "dragapult-pidgeot": {
+    "count": 1,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/pidgeot.png"
+    ]
+  },
+  "dragapult-iron-thorns": {
+    "count": 1,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/iron-thorns.png"
+    ]
+  },
+  "blaziken-ex-jtg": {
+    "count": 1,
+    "icons": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/blaziken.png"
+    ]
+  }
+}
