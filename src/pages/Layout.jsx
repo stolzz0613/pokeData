@@ -1,20 +1,15 @@
 // src/layouts/Layout.jsx
 import React from 'react'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 
 export default function Layout() {
-  const [isSidebarOpen, setSidebarOpen] = useState(true);
-
-  useEffect(() => {
-    document.dispatchEvent(new Event('render-event'))
-  }, [])
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="flex h-screen w-full px-0">
       <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
-
       <main className="flex-1 bg-white p-4 overflow-auto relative md:px-[100px]">
         {/* Poké Ball Toggle Button */}
         <button
