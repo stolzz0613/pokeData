@@ -30,10 +30,12 @@ const Layout = require('./src/pages/Layout.jsx').default;
 const Home = require('./src/pages/Home.jsx').default;
 const DeckBuilder = require('./src/pages/DeckBuilder.jsx').default;
 const TournamentPage = require('./src/pages/TournanentPage.jsx').default;
+const Privacy = require('./src/pages/Privacy.jsx').default;
 
 // Define tus rutas estáticas
 const routeList = [
   '/',
+  '/privacy',
   '/deck-builder',
   '/milwaukee',
   '/milwaukee/heatmap',
@@ -87,6 +89,7 @@ async function prerenderAll() {
           React.createElement(
             Route,
             { path: '/', element: React.createElement(Layout) },
+            React.createElement(Route, { path: 'privacy', element: React.createElement(Privacy) }),
             React.createElement(Route, { index: true, element: React.createElement(Home) }),
             React.createElement(Route, { path: 'deck-builder', element: React.createElement(DeckBuilder) }),
             React.createElement(

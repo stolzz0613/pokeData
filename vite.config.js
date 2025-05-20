@@ -7,6 +7,7 @@ import tournaments from './src/data/tournaments.json'
 
 const routes = [
   '/',
+  '/privacy',
   ...tournaments.flatMap(({ slug }) => [
     `/${slug}`,
     `/${slug}/heatmap`,
