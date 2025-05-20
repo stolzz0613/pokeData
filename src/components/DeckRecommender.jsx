@@ -2,7 +2,6 @@
 import React, { useState, useMemo } from 'react';
 import Papa from 'papaparse';
 
-// Component: recommends a deck based on winrates against multiple opponents
 export default function DeckRecommender({ csvText, summaryData }) {
   const [selectedOpponents, setSelectedOpponents] = useState([]);
 
@@ -73,11 +72,23 @@ export default function DeckRecommender({ csvText, summaryData }) {
 
   return (
     <div className="bg-white p-6 rounded-2xl shadow-md">
-      <h2 className="text-2xl font-semibold mb-4">Deck Recommendation</h2>
-      <p className="mb-2">Select one or more decks as opponents:</p>
+      {/* Header with title & description */}
+      <header className="mb-6 text-center">
+        <h2 className="text-3xl font-bold text-gray-900">
+          Deck Recommender
+        </h2>
+        <p className="mt-2 text-gray-600 max-w-lg mx-auto">
+          Choose decks you expect to face and get a top recommendation based on
+          historical win-rates. Effortlessly plan your lineup for any meta.
+        </p>
+      </header>
+
+      <p className="mb-2 text-gray-800">
+        Select one or more decks as opponents:
+      </p>
 
       {/* Deselect All button */}
-      <div className="mb-4">
+      <div className="mb-4 text-right">
         <button
           type="button"
           onClick={() => setSelectedOpponents([])}
@@ -88,7 +99,7 @@ export default function DeckRecommender({ csvText, summaryData }) {
       </div>
 
       {/* Selector: top 10 decks with icons */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4 max-h-64 overflow-y-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6 max-h-64 overflow-y-auto">
         {deckOptions.map(slug => {
           const selected = selectedOpponents.includes(slug);
           const { icons = [], count } = summaryData[slug] || {};
@@ -112,7 +123,7 @@ export default function DeckRecommender({ csvText, summaryData }) {
                   className="w-5 h-5 mr-1"
                 />
               ))}
-              <span className="truncate">{slug}</span>
+              <span className="truncate text-gray-900">{slug}</span>
               <span className="ml-auto text-xs text-gray-500">{count}</span>
             </button>
           );
@@ -121,8 +132,10 @@ export default function DeckRecommender({ csvText, summaryData }) {
 
       {/* Recommendation result */}
       {recommendation ? (
-        <div className="mt-4 p-4 bg-green-100 rounded">
-          <h3 className="text-xl font-semibold">We recommend:</h3>
+        <div className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
+          <h3 className="text-xl font-semibold text-green-800">
+            We recommend:
+          </h3>
           <div className="flex items-center mt-2">
             {summaryData[recommendation.deck]?.icons.map((url, i) => (
               <img
@@ -132,8 +145,10 @@ export default function DeckRecommender({ csvText, summaryData }) {
                 className="w-8 h-8 mr-2"
               />
             ))}
-            <span className="text-lg font-medium">{recommendation.deck}</span>
-            <span className="ml-auto font-semibold">
+            <span className="text-lg font-medium text-green-900">
+              {recommendation.deck}
+            </span>
+            <span className="ml-auto font-semibold text-green-700">
               Average winrate: {(recommendation.avg * 100).toFixed(1)}%
             </span>
           </div>

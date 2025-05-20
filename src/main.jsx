@@ -5,6 +5,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Layout from './pages/Layout.jsx';
 import TournamentPage from './pages/TournanentPage.jsx';
+import DeckBuilder from './pages/DeckBuilder.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 
 createRoot(document.getElementById('root')).render(
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
          <Routes>
            <Route path="/" element={<Layout />}>
              <Route index element={<Home />} />
+             <Route path='deck-builder' element={<DeckBuilder />} />
              <Route path=":tournament" element={<TournamentPage />}>
                <Route path="heatmap" element={<TournamentPage.Heatmap />} />
                <Route path="radarchart" element={<TournamentPage.RadarChart />} />

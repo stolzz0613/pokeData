@@ -2,17 +2,22 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
 import { Helmet } from 'react-helmet-async';
 
+// Smooth scrolling behavior
+if (typeof window !== 'undefined') {
+  document.documentElement.classList.add('scroll-smooth');
+}
+
 export default function GeneralStatsChart({ slug }) {
   const [players, setPlayers] = useState(null);
   const [deckIconsMap, setDeckIconsMap] = useState({});
   const [top3, setTop3] = useState({});
   const [error, setError] = useState(null);
 
-  // Cargar standings.json y deckIcons
+  // Load data
   useEffect(() => {
     fetch(`data/${slug}/standings.json`)
       .then(res => {
-        if (!res.ok) throw new Error('standings.json no encontrado');
+        if (!res.ok) throw new Error('standings.json not found');
         return res.json();
       })
       .then(data => {
@@ -21,97 +26,84 @@ export default function GeneralStatsChart({ slug }) {
       })
       .catch(err => setError(err.message));
 
-    // Cargar top3.json
     fetch(`data/${slug}/top3.json`)
       .then(res => {
-        if (!res.ok) throw new Error('top3.json no encontrado');
+        if (!res.ok) throw new Error('top3.json not found');
         return res.json();
       })
       .then(setTop3)
       .catch(err => console.warn(err.message));
   }, [slug]);
 
-  // Agrupa y ordena
+  // Chart data generator
   const makeChartData = (statusFilter, topN = Infinity) => {
     if (!players) return [];
-    const countMap = {};
+    const map = {};
     players
       .filter(p => statusFilter == null || p.status === statusFilter)
-      .forEach(p => {
-        countMap[p.deck] = (countMap[p.deck] || 0) + 1;
-      });
-    return Object.entries(countMap)
+      .forEach(p => map[p.deck] = (map[p.deck] || 0) + 1);
+    return Object.entries(map)
       .map(([deck, count]) => ({ deck, count }))
       .sort((a, b) => b.count - a.count)
       .slice(0, topN);
   };
 
-  const generalData = useMemo(() => makeChartData(null, 10), [players]);
-  const day2Data    = useMemo(() => makeChartData('day2', 10), [players]);
-  const topcutData  = useMemo(() => makeChartData('topcut'), [players]);
+  const dataSets = useMemo(() => ({
+    overall: makeChartData(null, 10),
+    day2:    makeChartData('day2', 10),
+    topcut:  makeChartData('topcut'),
+  }), [players]);
 
-  if (error) return <div className="text-red-600">Error: {error}</div>;
-  if (!players) return <div>Cargando estadísticas…</div>;
+  if (error) return <div className="text-red-600 p-4">Error: {error}</div>;
+  if (!players) return <div className="p-4 text-gray-600">Loading statistics…</div>;
 
-  // Capitalizar slug para título
   const titleName = slug.charAt(0).toUpperCase() + slug.slice(1);
+  const COLORS = ['#8884d8','#8dd1e1','#ffc658','#ff8042','#a4de6c','#d0ed57','#82ca9d','#ffc0cb','#8b008b'];
 
-  const COLORS = [
-    '#8884d8', '#8dd1e1', '#ffc658', '#ff8042',
-    '#a4de6c', '#d0ed57', '#82ca9d', '#d0ed57',
-    '#ffc0cb', '#8b008b'
-  ];
-
-  // Render de iconos dentro de cada slice
+  // Icon labels for pie slices
   const renderIconLabels = ({ cx, cy, midAngle, innerRadius, outerRadius, payload }) => {
-    const RADIAN = Math.PI / 180;
-    const radius = innerRadius + (outerRadius - innerRadius) * 0.7;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-    const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
+    const RAD = Math.PI / 180;
+    const r = innerRadius + (outerRadius - innerRadius) * 0.7;
+    const x = cx + r * Math.cos(-midAngle * RAD);
+    const y = cy + r * Math.sin(-midAngle * RAD);
     const icons = deckIconsMap[payload.deck] || [];
-    const iconSize = 25;
-    const spacing = 6;
-    const totalW = icons.length * iconSize + (icons.length - 1) * spacing;
+    const size = 24, space = 4;
+    const total = icons.length * size + (icons.length - 1) * space;
 
     return (
       <g>
         {icons.map((url, i) => (
           <image
-            key={`${payload.deck}-icon-${i}`}
+            key={`${payload.deck}-${i}`}
             href={url}
-            x={x - totalW / 2 + i * (iconSize + spacing)}
-            y={y - iconSize / 2}
-            width={iconSize}
-            height={iconSize}
+            x={x - total/2 + i*(size+space)}
+            y={y - size/2}
+            width={size}
+            height={size}
           />
         ))}
       </g>
     );
   };
 
-  // Tarjeta de gráfica con interactividad y outerRadius responsivo
-  const ChartCard = ({ title, data }) => {
-    const [selectedDeck, setSelectedDeck] = useState(null);
-    const [isMobile, setIsMobile] = useState(false);
+  // Card wrapper for each chart
+  const ChartCard = ({ label, data, name }) => {
+    const [selected, setSelected] = useState(null);
+    const [mobile, setMobile] = useState(false);
 
-    // Detectar tamaño de pantalla
     useEffect(() => {
-      const handler = () => setIsMobile(window.innerWidth < 768);
-      handler();
-      window.addEventListener('resize', handler);
-      return () => window.removeEventListener('resize', handler);
+      const onResize = () => setMobile(window.innerWidth < 768);
+      onResize();
+      window.addEventListener('resize', onResize);
+      return () => window.removeEventListener('resize', onResize);
     }, []);
 
-    // Radios: inner siempre 0, outer 100 en mobile, 200 en desktop
-    const innerR = 0;
-    const outerR = isMobile ? 120 : 200;
+    const outer = mobile ? 120 : 200;
 
     return (
-      <div className="bg-white p-6 rounded-2xl shadow-xl">
-        <h3 className="text-2xl font-semibold mb-4">{title}</h3>
+      <section id={name} className="bg-white rounded-xl shadow p-6 scroll-mt-20">
+        <h3 className="text-2xl font-semibold mb-4">{label}</h3>
         <div className="flex flex-col md:flex-row">
-          {/* Gráfico */}
           <div className="w-full md:w-2/3 h-64 md:h-[500px]">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -121,36 +113,33 @@ export default function GeneralStatsChart({ slug }) {
                   nameKey="deck"
                   cx="50%"
                   cy="50%"
-                  innerRadius={innerR}
-                  outerRadius={outerR}
+                  innerRadius={0}
+                  outerRadius={outer}
                   paddingAngle={2}
                   labelLine={false}
                   label={renderIconLabels}
-                  onClick={entry => setSelectedDeck(entry.deck)}
+                  onClick={e => setSelected(e.deck)}
                 >
-                  {data.map((_, idx) => (
-                    <Cell key={`cell-${idx}`} fill={COLORS[idx % COLORS.length]} cursor="pointer" />
+                  {data.map((_, i) => (
+                    <Cell key={i} fill={COLORS[i % COLORS.length]} cursor="pointer" />
                   ))}
                 </Pie>
-                <Tooltip formatter={val => [`${val}`, 'Count']} />
+                <Tooltip formatter={v => [v,'Count']} />
               </PieChart>
             </ResponsiveContainer>
           </div>
-          {/* Detalle Top 3 */}
           <div className="w-full md:w-1/3 md:pl-6 mt-6 md:mt-0">
-            {selectedDeck && top3[selectedDeck] ? (
-              <div className="border p-4 rounded-md">
-                <h4 className="text-lg font-medium mb-2">
-                  Top 3 de {selectedDeck.replace(/\//g, ' ')}
-                </h4>
-                <ul>
-                  {top3[selectedDeck].map(item => (
-                    <li key={item.rank} className="flex items-center justify-between mb-3">
-                      <span className="font-semibold">{item.rank}.</span>
-                      <span className="flex-1 mx-2">{item.name}</span>
-                      {deckIconsMap[selectedDeck]?.[0] && (
-                        <a href={item.decklist_link} target="_blank" rel="noopener noreferrer">
-                          <img src={deckIconsMap[selectedDeck][0]} alt={selectedDeck} className="w-6 h-6" />
+            {selected && top3[selected] ? (
+              <div className="border rounded-lg p-4">
+                <h4 className="text-lg font-medium mb-2">Top 3 for {selected.replace(/\//g,' ')}</h4>
+                <ul className="space-y-2">
+                  {top3[selected].map(i => (
+                    <li key={i.rank} className="flex items-center justify-between">
+                      <span className="font-semibold">{i.rank}.</span>
+                      <span className="flex-1 mx-2">{i.name}</span>
+                      {deckIconsMap[selected]?.[0] && (
+                        <a href={i.decklist_link} target="_blank" rel="noopener">
+                          <img src={deckIconsMap[selected][0]} alt="icon" className="w-5 h-5" />
                         </a>
                       )}
                     </li>
@@ -158,36 +147,53 @@ export default function GeneralStatsChart({ slug }) {
                 </ul>
               </div>
             ) : (
-              <div className="text-gray-500">Haz click en una sección…</div>
+              <div className="text-gray-400">Click a slice to view details</div>
             )}
           </div>
         </div>
-      </div>
+      </section>
     );
+  };
+
+  // Scroll helper
+  const scrollTo = id => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <>
       <Helmet>
-        <title>{`${titleName} Tournament – General Stats | MonsterData TCG`}</title>
-        <meta
-          name="description"
-          content={`Visualiza la distribución de decks y el top 3 de posiciones en el torneo ${titleName} en MonsterData TCG.`}
-        />
-        <meta property="og:title" content={`${titleName} Tournament – General Stats`} />
-        <meta
-          property="og:description"
-          content={`Mira cómo se distribuyeron los decks y quiénes dominaron el ${titleName}.`}
-        />
+        <title>{`${titleName} Tournament – Stats | MonsterData TCG`}</title>
+        <meta name="description" content={`Insights on ${titleName} deck distributions and top finishes.`} />
         <link rel="canonical" href={`https://monsterdata.online/${slug}/`} />
       </Helmet>
 
-      <div>
-        <h2 className="text-4xl font-bold mb-12">Estadística General</h2>
-        <div className="grid grid-cols-1 gap-12">
-          <ChartCard title="Top 10 General" data={generalData} />
-          <ChartCard title="Top 10 Día 2" data={day2Data} />
-          <ChartCard title="Todos Topcut" data={topcutData} />
+      <div className="max-w-5xl mx-auto px-4">
+        <h2 className="text-3xl font-bold mt-8 mb-4">General Statistics Overview</h2>
+        <p className="text-gray-600 mb-6">Explore the most played decks and top performers from the {titleName} tournament. Use the navigation below to quickly jump between charts.</p>
+
+        {/* Navbar */}
+        <nav className="flex space-x-4 mb-8 bg-white p-4 rounded shadow-md sticky top-4 z-10">
+          {[
+            { label: 'Top 10 Overall', id: 'overall' },
+            { label: 'Top 10 Day 2', id: 'day2' },
+            { label: 'All Topcut', id: 'topcut' }
+          ].map(link => (
+            <button
+              key={link.id}
+              onClick={() => scrollTo(link.id)}
+              className="text-gray-700 hover:text-blue-600 transition font-medium"
+            >
+              {link.label}
+            </button>
+          ))}
+        </nav>
+
+        <div className="space-y-12">
+          <ChartCard name="overall" label="Top 10 Overall" data={dataSets.overall} />
+          <ChartCard name="day2" label="Top 10 Day 2" data={dataSets.day2} />
+          <ChartCard name="topcut" label="All Topcut" data={dataSets.topcut} />
         </div>
       </div>
     </>

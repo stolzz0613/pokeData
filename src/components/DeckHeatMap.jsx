@@ -231,12 +231,23 @@ export default function DeckHeatmap({ csvText, summaryData }) {
   const rightMargin = halfSize + 20;
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow">
-      <h2 className="text-2xl font-semibold mb-4">Heatmap de Winrates</h2>
-      {/* Selectores */}
+    <div className="p-6 bg-white rounded-xl shadow-lg">
+      {/* Header with English title & explanation */}
+      <header className="mb-8 text-center">
+        <h1 className="text-4xl font-extrabold text-gray-900">
+          Pokémon TCG Deck Win-Rate Heatmap
+        </h1>
+        <p className="mt-2 max-w-2xl mx-auto text-gray-600">
+          Explore matchup probabilities between popular Pokémon TCG decks.
+          This interactive heatmap highlights your strongest and weakest
+          matchups at a glance, making strategic planning effortless.
+        </p>
+      </header>
+
+      {/* Selectors */}
       <div className="flex flex-col sm:flex-row gap-4 mb-6">
         <AxisSelector
-          label="Eje Y"
+          label="Y-Axis Decks"
           decks={decks}
           selected={yDecks}
           setSelected={setYDecks}
@@ -244,7 +255,7 @@ export default function DeckHeatmap({ csvText, summaryData }) {
           maxSelect={decks.length}
         />
         <AxisSelector
-          label="Eje X"
+          label="X-Axis Decks"
           decks={decks}
           selected={xDecks}
           setSelected={setXDecks}
@@ -252,15 +263,24 @@ export default function DeckHeatmap({ csvText, summaryData }) {
           maxSelect={isMobile ? 5 : decks.length}
         />
       </div>
-      {/* Summary */}
+
+      {/* Summary matrices */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         {summary.map(s => (
           <MatchSummaryMatrix key={s.deckY} {...s} iconMap={iconMap} />
         ))}
       </div>
-      {/* Gráfico */}
+
+      {/* Heatmap chart */}
       <ResponsiveContainer width="100%" height={600}>
-        <ScatterChart margin={{ top: topMargin, right: rightMargin, bottom: bottomMargin, left: leftMargin }}>
+        <ScatterChart
+          margin={{
+            top: topMargin,
+            right: rightMargin,
+            bottom: bottomMargin,
+            left: leftMargin,
+          }}
+        >
           <XAxis
             type="number"
             dataKey="x"
@@ -276,7 +296,10 @@ export default function DeckHeatmap({ csvText, summaryData }) {
                   x={
                     x +
                     idx * (iconSize + spacing) -
-                    (((iconMap[filteredX[payload.value]] || []).length * (iconSize + spacing) - spacing) / 2)
+                    (((iconMap[filteredX[payload.value]] || []).length *
+                      (iconSize + spacing) -
+                      spacing) /
+                      2)
                   }
                   y={y + iconSize + spacing}
                   width={iconSize}
@@ -309,12 +332,26 @@ export default function DeckHeatmap({ csvText, summaryData }) {
             data={points}
             dataKey="value"
             shape={({ cx, cy, value }) => (
-              <rect x={cx - halfSize} y={cy - halfSize} width={squareSize} height={squareSize} fill={getColor(value)} />
+              <rect
+                x={cx - halfSize}
+                y={cy - halfSize}
+                width={squareSize}
+                height={squareSize}
+                fill={getColor(value)}
+              />
             )}
           >
-            <LabelList dataKey="label" position="inside" style={{ fill: '#000', fontSize: 12, fontWeight: 'bold' }} />
+            <LabelList
+              dataKey="label"
+              position="inside"
+              style={{ fill: '#000', fontSize: 12, fontWeight: 'bold' }}
+            />
           </Scatter>
-          <Tooltip formatter={val => `${(val * 100).toFixed(1)}%`} cursor={{ strokeDasharray: '3 3' }} wrapperStyle={{ outline: 'none' }} />
+          <Tooltip
+            formatter={val => `${(val * 100).toFixed(1)}%`}
+            cursor={{ strokeDasharray: '3 3' }}
+            wrapperStyle={{ outline: 'none' }}
+          />
         </ScatterChart>
       </ResponsiveContainer>
     </div>
