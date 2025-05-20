@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Layout from './pages/Layout.jsx';
 import TournamentPage from './pages/TournanentPage.jsx';
@@ -11,7 +11,7 @@ import { HelmetProvider } from 'react-helmet-async';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
-      <HashRouter>
+      <BrowserRouter>
          <Routes>
            <Route path="/" element={<Layout />}>
              <Route index element={<Home />} />
@@ -24,7 +24,7 @@ createRoot(document.getElementById('root')).render(
              </Route>
            </Route>
          </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </HelmetProvider>
   </StrictMode>
 );
