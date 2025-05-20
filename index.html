@@ -6,17 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
     <title>MonsterData</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5632355679539983"
-      crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2J2XC1PWS9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-2J2XC1PWS9');
+    <!-- Delay loading of Ads and Analytics -->
+    <script>
+      // Load scripts after user interaction
+      function loadThirdPartyScripts() {
+        // AdSense
+        const adsScript = document.createElement('script');
+        adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5632355679539983";
+        adsScript.async = true;
+        adsScript.crossOrigin = "anonymous";
+        document.head.appendChild(adsScript);
+
+        // Google Analytics
+        const gtagScript = document.createElement('script');
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-2J2XC1PWS9";
+        gtagScript.async = true;
+        document.head.appendChild(gtagScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-2J2XC1PWS9');
+
+        // Clean up listeners
+        window.removeEventListener('scroll', loadThirdPartyScripts);
+        window.removeEventListener('mousemove', loadThirdPartyScripts);
+        window.removeEventListener('touchstart', loadThirdPartyScripts);
+      }
+
+      // Add listeners
+      window.addEventListener('scroll', loadThirdPartyScripts, { once: true });
+      window.addEventListener('mousemove', loadThirdPartyScripts, { once: true });
+      window.addEventListener('touchstart', loadThirdPartyScripts, { once: true });
     </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
