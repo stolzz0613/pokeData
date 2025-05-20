@@ -93,7 +93,9 @@ export default function DeckBuilder() {
               reader.onloadend = () => resolve(reader.result);
               reader.readAsDataURL(blob);
             });
-          } catch {}
+          } catch {
+            console.error(`Error fetching image for ${item.name}:`, error);
+          }
         }
         return { ...item, market_price, imgData };
       }));

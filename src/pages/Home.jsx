@@ -32,7 +32,15 @@ export default function Home() {
         {/* Hero Section */}
         <section className="flex-grow flex flex-col items-center justify-center text-center px-4 bg-gradient-to-b from-blue-50 to-white">
           <div className="p-8 rounded-lg max-w-2xl">
-            <img src={'/logo.svg'} alt="MonsterData Logo" className="mx-auto h-60 w-auto mb-6" />
+            <img
+              src={'/logo.svg'}
+              alt="MonsterData Logo"
+              className="mx-auto h-60 w-auto mb-6"
+              decoding="async"
+              fetchpriority="high" />
+              <noscript>
+              <h1 className="text-3xl font-bold text-center">MonsterData</h1>
+            </noscript>
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
               Power Your Play with Real Data
             </h1>
