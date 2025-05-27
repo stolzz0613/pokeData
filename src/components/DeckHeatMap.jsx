@@ -66,13 +66,13 @@ function AxisSelector({ label, decks, selected, setSelected, iconMap, maxSelect 
         <button
           onClick={() => setSelected(decks.slice(0, maxSelect))}
           disabled={decks.length === 0}
-          className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm disabled:opacity-50"
+          className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-600 text-sm disabled:opacity-50 font-bungee cursor-pointer"
         >
           Select Top {maxSelect}
         </button>
         <button
           onClick={() => setSelected([])}
-          className="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 text-sm"
+          className="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 text-sm font-bungee cursor-pointer"
         >
           Clear All
         </button>
@@ -120,7 +120,7 @@ function MatchSummaryMatrix({ deckY, best, worst, iconMap }) {
         {(iconMap[deckY] || []).map((url, i) => (
           <img key={i} src={url} alt="" className="h-8 w-8 mr-2 rounded-full" />
         ))}
-        <h3 className="text-lg font-semibold truncate">
+        <h3 className="text-lg font-bungee truncate">
           {deckY.replace(/-/g, ' ')}
         </h3>
       </div>
@@ -233,11 +233,11 @@ export default function DeckHeatmap({ csvText, summaryData }) {
   return (
     <div className="p-6 bg-white rounded-xl shadow-lg">
       {/* Header with English title & explanation */}
-      <header className="mb-8 text-center">
-        <h1 className="text-4xl font-extrabold text-gray-900">
+      <header className="mb-8">
+        <h1 className="text-4xl font-extrabold text-blue-700 font-baloo-2">
           Pokémon TCG Deck Win-Rate Heatmap
         </h1>
-        <p className="mt-2 max-w-2xl mx-auto text-gray-600">
+        <p className="mt-2 mx-auto text-gray-600 text-center">
           Explore matchup probabilities between popular Pokémon TCG decks.
           This interactive heatmap highlights your strongest and weakest
           matchups at a glance, making strategic planning effortless.

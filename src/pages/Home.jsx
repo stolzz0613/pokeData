@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import CookieConsent from 'react-cookie-consent';
+import { NavLink } from 'react-router-dom';
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
@@ -30,8 +31,8 @@ export default function Home() {
       <div className="min-h-screen flex flex-col">
 
         {/* Hero Section */}
-        <section className="flex-grow flex flex-col items-center justify-center text-center px-4 bg-gradient-to-b from-blue-50 to-white">
-          <div className="p-8 rounded-lg max-w-2xl">
+        <section className="flex-grow flex flex-col items-center justify-center text-center px-4">
+          <div className="p-8 rounded-lg max-w-3xl">
             <img
               src={'/logo.svg'}
               alt="MonsterData Logo"
@@ -41,62 +42,54 @@ export default function Home() {
               <noscript>
               <h1 className="text-3xl font-bold text-center">MonsterData</h1>
             </noscript>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
-              Power Your Play with Real Data
-            </h1>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              MonsterData TCG offers advanced deck analytics, meta trends, and customizable alerts so you stay ahead in every Pokémon TCG tournament.
+            <p className="text-2xl md:text-4xl font-bold mb-4" style={{ color: '#005B9E' }}>
+              Play Smart. Win with Data.
+            </p>
+            <p className="text-gray-600 mb-6 leading-relaxed font-bold text-m" style={{ color: '#00273A' }}>
+              MonsterData TCG gives you access to advanced deck stats, meta trends, and custom alerts so you always play with an edge in every Pokémon TCG tournament.
             </p>
           </div>
         </section>
 
         {/* Features Section */}
         <section id="features" className="bg-white py-12">
-          <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl">
             {[
               {
-                icon: 'https://img.icons8.com/color/96/000000/combo-chart.png',
-                title: 'Deck Analysis',
-                text: 'Compare win rates and statistics to discover the best strategies.'
+                icon: './assets/deck.webp',
+                title: 'Deck Builder',
+                text: 'Upload your deck and get instant insights',
+                link: '/deck-builder'
               },
               {
-                icon: 'https://img.icons8.com/color/96/000000/pie-chart.png',
+                icon: './assets/stats.webp',
                 title: 'Interactive Charts',
-                text: 'Visualize matchups, popularity, and meta shifts with dynamic graphs.'
+                text: 'Compare win rates and statistics to discover the best strategies.',
+                link: '/tournaments'
               },
               {
-                icon: 'https://img.icons8.com/color/96/000000/appointment-reminders.png',
+                icon: './assets/notifications.webp',
                 title: 'Custom Alerts',
-                text: 'Get notified about new tournaments and key statistical changes.'
+                text: 'Get notified about new tournaments ',
+                link: '/'
               }
             ].map((feature, idx) => (
-              <div
-                key={idx}
-                className="p-6 border rounded-lg shadow-sm hover:shadow-md transition flex flex-col items-center text-center"
-              >
-                <img src={feature.icon} alt={feature.title} className="mb-4 h-24 w-24" />
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.text}</p>
-              </div>
+              <NavLink to={feature.link} className="no-underline" key={idx}>
+                <div
+                  key={idx}
+                  className="p-6 border rounded-lg shadow-sm hover:shadow-md transition flex flex-col items-center text-center"
+                >
+                  <img src={feature.icon} alt={feature.title} className="mb-4 h-24" />
+                  <p className="text-3xl font-semibold text-gray-800 mb-2 font-baloo-2">{feature.title}</p>
+                  <p className="text-gray-600 font-bold text-xl" style={{ color: '#00273A' }}>{feature.text}</p>
+                </div>
+              </NavLink>
             ))}
           </div>
         </section>
 
-        {/* About Section */}
-        <section id="about" className="bg-gray-50 py-12">
-          <div className="container mx-auto px-4 max-w-3xl text-gray-700 space-y-6">
-            <h2 className="text-2xl font-bold text-gray-800">What Is MonsterData?</h2>
-            <p>
-              MonsterData TCG was born from a passion for data-driven play and Pokémon competition. We collect historical tournament data, process thousands of matches, and deliver clear insights to elevate your game.
-            </p>
-            <p>
-              With powerful visual tools and configurable alerts, you'll never miss a meta trend or emerging deck. Empower your strategy with statistics.
-            </p>
-          </div>
-        </section>
-
         {/* Footer */}
-        <footer className="bg-gray-800 text-gray-400 py-6">
+        <footer className="text-gray-400 py-6">
           <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <p className="mb-2 md:mb-0">&copy; {currentYear} MonsterData. All rights reserved.</p>
             <a
@@ -113,7 +106,6 @@ export default function Home() {
       <CookieConsent
         buttonText="Accept"
         cookieName="monsterDataConsent"
-        style={{ background: "#2B373B" }}
         buttonStyle={{ color: "#4e503b", fontSize: "14px" }}
       >
         We use cookies to enhance your browsing experience.{' '}

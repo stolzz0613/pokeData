@@ -37,6 +37,7 @@ const routeList = [
   '/',
   '/privacy',
   '/deck-builder',
+  '/tournaments',
   '/milwaukee',
   '/milwaukee/heatmap',
   '/milwaukee/radarchart',
@@ -64,7 +65,11 @@ const routeList = [
   '/utrecht',
   '/utrecht/heatmap',
   '/utrecht/radarchart',
-  '/utrecht/recommender'
+  '/utrecht/recommender',
+  '/portland',
+  '/portland/heatmap',
+  '/portland/radarchart',
+  '/portland/recommender'
 ];
 
 async function prerenderAll() {

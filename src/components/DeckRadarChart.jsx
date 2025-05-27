@@ -105,11 +105,11 @@ export default function DeckRadarChart({ csvText, summaryData, analysis }) {
   return (
     <div className="p-6 bg-white rounded-xl shadow-lg">
       {/* Header with English title & explanation */}
-      <header className="mb-8 text-center">
-        <h1 className="text-3xl font-bold text-gray-900">
+      <header className="mb-8">
+        <h1 className="text-3xl font-bold text-blue-700 font-baloo-2">
           Pokémon TCG Deck Comparison Radar
         </h1>
-        <p className="mt-2 max-w-xl mx-auto text-gray-600">
+        <p className="mt-2 mx-auto text-gray-600 text-center">
           Visually compare average win-rates of two selected decks against all
           opponents. Switch between English and Español for tailored insights.
         </p>

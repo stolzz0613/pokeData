@@ -102,7 +102,7 @@ export default function GeneralStatsChart({ slug }) {
 
     return (
       <section id={name} className="bg-white rounded-xl shadow p-6 scroll-mt-20">
-        <h3 className="text-2xl font-semibold mb-4">{label}</h3>
+        <h3 className="text-2xl font-semibold mb-4 font-baloo-2">{label}</h3>
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-2/3 h-64 md:h-[500px]">
             <ResponsiveContainer width="100%" height="100%">
@@ -128,7 +128,7 @@ export default function GeneralStatsChart({ slug }) {
               </PieChart>
             </ResponsiveContainer>
           </div>
-          <div className="w-full md:w-1/3 md:pl-6 mt-6 md:mt-0">
+          <div className="w-full md:w-1/2 md:p-12 mt-6 md:mt-0">
             {selected && top3[selected] ? (
               <div className="border rounded-lg p-4">
                 <h4 className="text-lg font-medium mb-2">Top 3 for {selected.replace(/\//g,' ')}</h4>
@@ -170,11 +170,11 @@ export default function GeneralStatsChart({ slug }) {
       </Helmet>
 
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mt-8 mb-4">General Statistics Overview</h2>
-        <p className="text-gray-600 mb-6">Explore the most played decks and top performers from the {titleName} tournament. Use the navigation below to quickly jump between charts.</p>
+        <h2 className="text-4xl font-bold text-blue-700 font-baloo-2 mt-8 mb-4">General Statistics Overview</h2>
+        <p className="text-gray-600 mb-6 text-center">Explore the most played decks and top performers from the {titleName} tournament. Use the navigation below to quickly jump between charts.</p>
 
         {/* Navbar */}
-        <nav className="flex space-x-4 mb-8 bg-white p-4 rounded shadow-md sticky top-4 z-10">
+        <nav className="flex space-x-4 mb-8 bg-blue-600 p-4 rounded shadow-md sticky top-1 z-10 text-right text-white justify-end">
           {[
             { label: 'Top 10 Overall', id: 'overall' },
             { label: 'Top 10 Day 2', id: 'day2' },
@@ -183,7 +183,7 @@ export default function GeneralStatsChart({ slug }) {
             <button
               key={link.id}
               onClick={() => scrollTo(link.id)}
-              className="text-gray-700 hover:text-blue-600 transition font-medium"
+              className="transition font-baloo-2 font-bold cursor-pointer"
             >
               {link.label}
             </button>

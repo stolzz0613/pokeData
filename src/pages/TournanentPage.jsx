@@ -1,57 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, NavLink, Outlet, useOutletContext } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import DeckHeatmap from '../components/DeckHeatMap.jsx';
-import GeneralStats from './GeneralStats.jsx';
-import DeckRadarChart from '../components/DeckRadarChart.jsx';
-import DeckRecommender from '../components/DeckRecommender.jsx';
+import React, { useState, useEffect } from 'react'
+import { useParams, NavLink, Outlet, useOutletContext } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+import DeckHeatmap from '../components/DeckHeatMap.jsx'
+import GeneralStats from './GeneralStats.jsx'
+import DeckRadarChart from '../components/DeckRadarChart.jsx'
+import DeckRecommender from '../components/DeckRecommender.jsx'
 
 export default function TournamentPage() {
-  const { tournament } = useParams();
-  const slug = tournament.toLowerCase();
-  const [csvText, setCsvText] = useState(null);
-  const [summaryData, setSummaryData] = useState(null);
-  const [analysis, setAnalysis] = useState(null);
-  const [error, setError] = useState(null);
+  const { tournament } = useParams()
+  const slug = tournament.toLowerCase()
+  const [csvText, setCsvText] = useState(null)
+  const [summaryData, setSummaryData] = useState(null)
+  const [analysis, setAnalysis] = useState(null)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
-    setError(null);
+    setError(null)
 
     // cargar CSV
     fetch(`data/${slug}/results.csv`)
       .then(res => {
-        if (!res.ok) throw new Error('CSV no encontrado');
-        return res.text();
+        if (!res.ok) throw new Error('CSV no encontrado')
+        return res.text()
       })
       .then(setCsvText)
-      .catch(e => setError(e.message));
+      .catch(e => setError(e.message))
     
     fetch(`data/${slug}/analysis.json`)
       .then(res => {
-        if (!res.ok) throw new Error('Analisis no encontrado');
-        return res.json();
+        if (!res.ok) throw new Error('Análisis no encontrado')
+        return res.json()
       })
       .then(setAnalysis)
-      .catch(e => setError(e.message));
+      .catch(e => setError(e.message))
 
     // cargar JSON
     fetch(`data/${slug}/decks_summary.json`)
       .then(res => {
-        if (!res.ok) throw new Error('JSON no encontrado');
-        return res.json();
+        if (!res.ok) throw new Error('JSON no encontrado')
+        return res.json()
       })
       .then(setSummaryData)
-      .catch(e => setError(e.message));
-  }, [slug]);
+      .catch(e => setError(e.message))
+  }, [slug])
 
-  if (error) return <div className="text-red-600">Error: {error}</div>;
-  if (!csvText || !summaryData || !analysis) return <div>Cargando datos…</div>;
+  if (error) return <div className="text-red-600">Error: {error}</div>
+  if (!csvText || !summaryData || !analysis) return <div>Cargando datos…</div>
 
-  // Capitalize tournament name for title
-  const titleName = tournament.charAt(0).toUpperCase() + tournament.slice(1);
+  // Nombre capitalizado para el título
+  const titleName = tournament.charAt(0).toUpperCase() + tournament.slice(1)
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>{`${titleName} Tournament Stats | MonsterData TCG`}</title>
         <meta
@@ -67,15 +67,23 @@ export default function TournamentPage() {
         <link rel="canonical" href={`https://monsterdata.online/${slug}`} />
       </Helmet>
 
-      <div>
+      {/* Header de la página */}
+      <header className="flex shadow p-4 px-12 mb-6 justify-between" style={{ backgroundColor: '#0065B0'}}>
+        <h2 className="text-2xl text-white font-bungee">
+          {titleName}
+        </h2>
+        <a href='' className="text-2xl text-white font-bungee cursor-pointer"> Home</a>
+      </header>
+
+      <div className='px-24'>
         {/* Navbar interna de pestañas */}
-        <nav className="pl-[60px] text-[12px] flex justify-center md:justify-start space-x-4 mb-8 border-b pb-4">
+        <nav className="pl-[60px] text-[12px] flex justify-center md:justify-end space-x-8 mb-8 pb-4 font-bungee">
           <NavLink
             to=""
             end
             className={({ isActive }) =>
               isActive
-                ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
+                ? 'text-blue-600 pb-1'
                 : 'text-gray-600 hover:text-blue-600'
             }
           >
@@ -85,7 +93,7 @@ export default function TournamentPage() {
             to="heatmap"
             className={({ isActive }) =>
               isActive
-                ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
+                ? 'text-blue-600 pb-1'
                 : 'text-gray-600 hover:text-blue-600'
             }
           >
@@ -95,7 +103,7 @@ export default function TournamentPage() {
             to="radarchart"
             className={({ isActive }) =>
               isActive
-                ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
+                ? 'text-blue-600 pb-1'
                 : 'text-gray-600 hover:text-blue-600'
             }
           >
@@ -105,7 +113,7 @@ export default function TournamentPage() {
             to="recommender"
             className={({ isActive }) =>
               isActive
-                ? 'border-b-2 border-blue-500 text-blue-600 pb-1'
+                ? 'text-blue-600 pb-1'
                 : 'text-gray-600 hover:text-blue-600'
             }
           >
@@ -116,47 +124,31 @@ export default function TournamentPage() {
         {/* Aquí se renderiza la pestaña activa */}
         <Outlet context={{ csvText, summaryData, slug, analysis }} />
       </div>
-    </>
-  );
+    </div>
+  )
 }
 
 // Sub-tabs
 TournamentPage.Heatmap = function HeatmapTab() {
-  const { csvText, summaryData, slug } = useOutletContext();
-  return (
-    <DeckHeatmap
-      key={slug}
-      csvText={csvText}
-      summaryData={summaryData}
-    />
-  );
-};
+  const { csvText, summaryData, slug } = useOutletContext()
+  return <DeckHeatmap key={slug} csvText={csvText} summaryData={summaryData} />
+}
 
 TournamentPage.RadarChart = function RadarChartTab() {
-  const { csvText, summaryData, slug, analysis } = useOutletContext();
+  const { csvText, summaryData, slug, analysis } = useOutletContext()
   return (
-    <DeckRadarChart
-      key={slug}
-      csvText={csvText}
-      summaryData={summaryData}
-      analysis={analysis}
-    />
-  );
-};
+    <DeckRadarChart key={slug} csvText={csvText} summaryData={summaryData} analysis={analysis} />
+  )
+}
 
 TournamentPage.Recommender = function RecommenderTab() {
-  const { csvText, summaryData, slug, analysis } = useOutletContext();
+  const { csvText, summaryData, slug, analysis } = useOutletContext()
   return (
-    <DeckRecommender
-      key={slug}
-      csvText={csvText}
-      summaryData={summaryData}
-      analysis={analysis}
-    />
-  );
-};
+    <DeckRecommender key={slug} csvText={csvText} summaryData={summaryData} analysis={analysis} />
+  )
+}
 
 TournamentPage.GeneralStats = function GeneralStatsTab() {
-  const { slug } = useOutletContext();
-  return <GeneralStats slug={slug} />;
-};
+  const { slug } = useOutletContext()
+  return <GeneralStats slug={slug} />
+}

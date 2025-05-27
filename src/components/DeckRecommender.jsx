@@ -73,17 +73,16 @@ export default function DeckRecommender({ csvText, summaryData }) {
   return (
     <div className="bg-white p-6 rounded-2xl shadow-md">
       {/* Header with title & description */}
-      <header className="mb-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">
+      <header className="mb-6">
+        <h2 className="text-3xl font-bold text-blue-700 font-baloo-2">
           Deck Recommender
         </h2>
-        <p className="mt-2 text-gray-600 max-w-lg mx-auto">
-          Choose decks you expect to face and get a top recommendation based on
-          historical win-rates. Effortlessly plan your lineup for any meta.
+        <p className="mt-2 text-gray-600 text-center">
+          Choose decks you expect to face and get a top recommendation based on historical win-rates. Effortlessly plan your lineup for any meta.
         </p>
       </header>
 
-      <p className="mb-2 text-gray-800">
+      <p className="mt-24 mb-2 text-gray-800">
         Select one or more decks as opponents:
       </p>
 
@@ -123,7 +122,7 @@ export default function DeckRecommender({ csvText, summaryData }) {
                   className="w-5 h-5 mr-1"
                 />
               ))}
-              <span className="truncate text-gray-900">{slug}</span>
+              <span className="truncate text-gray-900 font-bungee">{slug}</span>
               <span className="ml-auto text-xs text-gray-500">{count}</span>
             </button>
           );
@@ -133,7 +132,7 @@ export default function DeckRecommender({ csvText, summaryData }) {
       {/* Recommendation result */}
       {recommendation ? (
         <div className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
-          <h3 className="text-xl font-semibold text-green-800">
+          <h3 className="text-xl text-green-800 font-bungee">
             We recommend:
           </h3>
           <div className="flex items-center mt-2">

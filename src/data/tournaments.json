@@ -1,9 +1,10 @@
 [
-    { "slug": "milwaukee", "name": "Milwaukee",  "icon": "🏙️" },
-    { "slug": "sevilla",    "name": "Sevilla",    "icon": "⚡️" },
-    { "slug": "monterrey",  "name": "Monterrey",  "icon": "🏰" },
-    { "slug": "atlanta",    "name": "Atlanta",    "icon": "🔥" },
-    { "slug": "melbourne", "name": "Melbourne",  "icon": "🏖️" },
-    { "slug": "santiago",   "name": "Santiago",   "icon": "🌋" },
-    { "slug": "utrecht",    "name": "Utrecht",    "icon": "🏰" }
+    { "slug": "milwaukee", "name": "Milwaukee",  "icon": "🏙️", "type": "Regional" },
+    { "slug": "sevilla",    "name": "Sevilla",    "icon": "⚡️", "type": "Special" },
+    { "slug": "monterrey",  "name": "Monterrey",  "icon": "🏰", "type": "Regional" },
+    { "slug": "atlanta",    "name": "Atlanta",    "icon": "🔥", "type": "Regional" },
+    { "slug": "melbourne", "name": "Melbourne",  "icon": "🏖️", "type": "Regional" },
+    { "slug": "santiago",   "name": "Santiago",   "icon": "🌋", "type": "Regional" },
+    { "slug": "utrecht",    "name": "Utrecht",    "icon": "🏰", "type": "Special" },
+    { "slug": "portland",   "name": "Portland",    "icon": "🌲", "type": "Regional" }
 ]

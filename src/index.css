@@ -1,1 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Comme:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --default-font-family: "Comme", sans-serif;
+  --font-baloo-2: "Baloo 2", sans-serif;
+  --font-bungee: "Bungee", cursive;
+  --color-blue-600: #0065B0;
+  --bg-blue-600: #0065B0;
+  --color-blue-700: #083E5C;
+}
+
+main {
+  padding: 0 !important;
+}
+
+/* Utility classes to apply the fonts */
+.font-default { font-family: var(--default-font-family); }
+.font-baloo-2 { font-family: var(--font-baloo-2); }
+.font-bungee { font-family: var(--font-bungee); }
+
+/* Override Tailwind's blue-600 for background */
+.bg-blue-600 { background-color: var(--color-blue-600) !important; }
