@@ -1,11 +1,11 @@
 {
-  "noctowl/ogerpon-wellspring": {
-    "en": "Noctowl/Ogerpon-Wellspring recorded a strong 45.0% average win rate, making it one of the more effective decks in this pool.",
-    "es": "Noctowl/Ogerpon-Wellspring registró una sólida tasa de victoria promedio de 45.0%, colocándolo como uno de los mazos más efectivos en este grupo."
+  "tera-box": {
+    "en": "tera-box recorded a strong 45.0% average win rate, making it one of the more effective decks in this pool.",
+    "es": "tera-box registró una sólida tasa de victoria promedio de 45.0%, colocándolo como uno de los mazos más efectivos en este grupo."
   },
-  "joltik/pikachu": {
-    "en": "Joltik/Pikachu delivered a 44.8% average win rate, demonstrating competitive but slightly inconsistent performance.",
-    "es": "Joltik/Pikachu ofreció una tasa de victoria promedio de 44.8%, demostrando un rendimiento competitivo pero ligeramente inconsistente."
+  "joltik-box": {
+    "en": "joltik-box delivered a 44.8% average win rate, demonstrating competitive but slightly inconsistent performance.",
+    "es": "joltik-box ofreció una tasa de victoria promedio de 44.8%, demostrando un rendimiento competitivo pero ligeramente inconsistente."
   },
   "dragapult": {
     "en": "Pure Dragapult posted a 43.6% average win rate, demonstrating competitive performance within the meta.",
@@ -27,9 +27,9 @@
     "en": "Gardevoir achieved a 38.9% average win rate across its matchups, positioning it in the mid-tier performance bracket.",
     "es": "Gardevoir logró una tasa de victoria promedio de 38.9% en sus enfrentamientos, ubicándose en el rango de rendimiento de nivel medio."
   },
-  "zoroark/darmanitan": {
-    "en": "Zoroark/Darmanitan posted a 38.2% average win rate, indicating it struggled to keep pace with stronger archetypes.",
-    "es": "Zoroark/Darmanitan obtuvo una tasa de victoria promedio de 38.2%, lo que indica que tuvo dificultades para mantenerse al nivel de los arquetipos más fuertes."
+  "n-zoroark": {
+    "en": "n-zoroark posted a 38.2% average win rate, indicating it struggled to keep pace with stronger archetypes.",
+    "es": "n-zoroark obtuvo una tasa de victoria promedio de 38.2%, lo que indica que tuvo dificultades para mantenerse al nivel de los arquetipos más fuertes."
   },
   "gholdengo/dragapult": {
     "en": "Gholdengo/Dragapult averaged a 37.0% win rate, suggesting it was serviceable but lacked dominance.",
