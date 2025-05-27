@@ -170,11 +170,11 @@ export default function GeneralStatsChart({ slug }) {
       </Helmet>
 
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-blue-700 font-baloo-2 mt-8 mb-4">General Statistics Overview</h2>
+        <h2 className="text-4xl font-bold text-blue-700 font-baloo-2 mt-8 mb-4 text-center md:text-left">General Statistics Overview</h2>
         <p className="text-gray-600 mb-6 text-center">Explore the most played decks and top performers from the {titleName} tournament. Use the navigation below to quickly jump between charts.</p>
 
         {/* Navbar */}
-        <nav className="flex space-x-4 mb-8 bg-blue-600 p-4 rounded shadow-md sticky top-1 z-10 text-right text-white justify-end">
+        <nav className="flex space-x-4 mb-8 bg-blue-600 p-4 rounded shadow-md sticky top-1 z-10 text-right text-white justify-center md:justify-end">
           {[
             { label: 'Top 10 Overall', id: 'overall' },
             { label: 'Top 10 Day 2', id: 'day2' },

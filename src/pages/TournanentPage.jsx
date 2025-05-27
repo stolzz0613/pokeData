@@ -75,9 +75,9 @@ export default function TournamentPage() {
         <a href='' className="text-2xl text-white font-bungee cursor-pointer"> Home</a>
       </header>
 
-      <div className='px-24'>
+      <div className='px-4 md:px-24'>
         {/* Navbar interna de pestañas */}
-        <nav className="pl-[60px] text-[12px] flex justify-center md:justify-end space-x-8 mb-8 pb-4 font-bungee">
+        <nav className="d-flex items-center pl-0 md:pl-[60px] text-[12px] flex justify-center md:justify-end space-x-8 mb-8 pb-4 font-bungee">
           <NavLink
             to=""
             end
