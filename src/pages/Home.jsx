@@ -38,7 +38,7 @@ export default function Home() {
               alt="MonsterData Logo"
               className="mx-auto h-60 w-auto mb-6"
               decoding="async"
-              fetchpriority="high" />
+            />
               <noscript>
               <h1 className="text-3xl font-bold text-center">MonsterData</h1>
             </noscript>
@@ -63,7 +63,7 @@ export default function Home() {
               },
               {
                 icon: './assets/stats.webp',
-                title: 'Interactive Charts',
+                title: 'Tournaments Charts',
                 text: 'Compare win rates and statistics to discover the best strategies.',
                 link: '/tournaments'
               },

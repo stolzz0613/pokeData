@@ -6,7 +6,7 @@
   "homepage": "https://stolzz0613.github.io/pokeData",
   "scripts": {
     "build": "vite build && node prerender-all.cjs && cp dist/index.html dist/404.html",
-    "postbuild": "node prerender-home.cjs && cp dist/index.html dist/404.html",
+    "postbuild": "cp dist/index.html dist/404.html",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "lint": "eslint .",
