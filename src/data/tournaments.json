@@ -6,5 +6,6 @@
     { "slug": "melbourne", "name": "Melbourne",  "icon": "🏖️", "type": "Regional" },
     { "slug": "santiago",   "name": "Santiago",   "icon": "🌋", "type": "Regional" },
     { "slug": "utrecht",    "name": "Utrecht",    "icon": "🏰", "type": "Special" },
-    { "slug": "portland",   "name": "Portland",    "icon": "🌲", "type": "Regional" }
+    { "slug": "portland",   "name": "Portland",    "icon": "🌲", "type": "Regional" },
+    { "slug": "bologna",   "name": "Bologna",    "icon": "🌲", "type": "Special" }
 ]

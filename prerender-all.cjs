@@ -69,7 +69,11 @@ const routeList = [
   '/portland',
   '/portland/heatmap',
   '/portland/radarchart',
-  '/portland/recommender'
+  '/portland/recommender',
+  '/bologna',
+  '/bologna/heatmap',
+  '/bologna/radarchart',
+  '/bologna/recommender'
 ];
 
 async function prerenderAll() {

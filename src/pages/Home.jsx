@@ -53,7 +53,7 @@ export default function Home() {
 
         {/* Features Section */}
         <section id="features" className="bg-white py-12">
-          <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl">
+          <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl">
             {[
               {
                 icon: './assets/deck.webp',
@@ -66,12 +66,6 @@ export default function Home() {
                 title: 'Tournaments Charts',
                 text: 'Compare win rates and statistics to discover the best strategies.',
                 link: '/tournaments'
-              },
-              {
-                icon: './assets/notifications.webp',
-                title: 'Custom Alerts',
-                text: 'Get notified about new tournaments ',
-                link: '/'
               }
             ].map((feature, idx) => (
               <NavLink to={feature.link} className="no-underline" key={idx}>
@@ -81,7 +75,7 @@ export default function Home() {
                 >
                   <img src={feature.icon} alt={feature.title} className="mb-4 h-24" />
                   <p className="text-3xl font-semibold text-gray-800 mb-2 font-baloo-2">{feature.title}</p>
-                  <p className="text-gray-600 font-bold text-xl" style={{ color: '#00273A' }}>{feature.text}</p>
+                  <p className="text-gray-600 font-bold text-md" style={{ color: '#00273A' }}>{feature.text}</p>
                 </div>
               </NavLink>
             ))}
