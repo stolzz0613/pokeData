@@ -38,6 +38,7 @@ const routeList = [
   '/privacy',
   '/deck-builder',
   '/tournaments',
+  '/scanner',
   '/milwaukee',
   '/milwaukee/heatmap',
   '/milwaukee/radarchart',

@@ -53,7 +53,7 @@ export default function Home() {
 
         {/* Features Section */}
         <section id="features" className="bg-white py-12">
-          <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl">
+          <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl">
             {[
               {
                 icon: './assets/deck.webp',
@@ -66,6 +66,12 @@ export default function Home() {
                 title: 'Tournaments Charts',
                 text: 'Compare win rates and statistics to discover the best strategies.',
                 link: '/tournaments'
+              },
+              {
+                icon: './assets/scanner.webp',
+                title: 'Card Scanner',
+                text: 'Scan a physical card to get instant prices and stats',
+                link: '/scanner'
               }
             ].map((feature, idx) => (
               <NavLink to={feature.link} className="no-underline" key={idx}>

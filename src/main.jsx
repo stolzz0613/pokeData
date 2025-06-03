@@ -9,6 +9,7 @@ import DeckBuilder from './pages/DeckBuilder.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 import Privacy from './pages/Privacy.jsx';
 import Tournaments from './pages/Tournaments.jsx';
+import CardScanner from './pages/CardScanner.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
             <Route index element={<Home />} />
             <Route path='deck-builder' element={<DeckBuilder />} />
             <Route path='tournaments' element={<Tournaments />} />
+            <Route path='scanner' element={<CardScanner />} />
             <Route path=":tournament" element={<TournamentPage />}>
               <Route path="heatmap" element={<TournamentPage.Heatmap />} />
               <Route path="radarchart" element={<TournamentPage.RadarChart />} />
