@@ -55,12 +55,6 @@ export default function Scanner() {
     return result;
   }, [cardDatabase]);
 
-  // Debug: mostrar mapping en consola
-  useEffect(() => {
-    console.log("Card name to IDs mapping:", cardNameToIDs);
-  }, [cardNameToIDs]);
-
-  // 3) Configurar la API de PokéTCG SDK y encender cámara
   useEffect(() => {
     const apiKey = "b15c5d63-aa96-46b8-9032-b4cb29ddb3f10";
     pokemon.configure({ apiKey });
@@ -82,7 +76,7 @@ export default function Scanner() {
         videoRef.current.srcObject.getTracks().forEach((track) => track.stop());
       }
     };
-  }, []);
+  }, [matchedKeys]);
 
   // 4) Limpiar texto de OCR
   const cleanText = (str) => {
@@ -150,7 +144,6 @@ export default function Scanner() {
     canvas.height = dh;
     ctx.drawImage(video, sx, sy, sw, sh, 0, 0, dw, dh);
 
-    // 1) Convertir canvas a dataURL
     let imageDataUrl;
     try {
       imageDataUrl = canvas.toDataURL("image/png");
@@ -162,19 +155,16 @@ export default function Scanner() {
     const img = new Image();
     img.src = imageDataUrl;
 
-    // 2) Intentar decodificar la imagen, pero capturar AbortError
     try {
       await img.decode();
     } catch (err) {
       if (err.name === "AbortError") {
-        // Se abortó la decodificación; salimos sin hacer nada
         return;
       }
       console.error("Error al decodificar la imagen:", err);
       return;
     }
 
-    // 3) Llamada a Tesseract, también capturando AbortError
     let ocrResult;
     try {
       ocrResult = await Tesseract.recognize(img, "eng", {
@@ -182,7 +172,6 @@ export default function Scanner() {
       });
     } catch (err) {
       if (err.name === "AbortError") {
-        // El reconocimiento se interrumpió; simplemente salimos
         return;
       }
       console.error("Error al reconocer el texto con Tesseract:", err);
@@ -280,7 +269,7 @@ export default function Scanner() {
           Home
         </a>
       </header>
-      <div className="scanner-container">
+      <div className="scanner-container p-12">
         <div className="video-container">
           <video ref={videoRef} className="video-feed" />
           <div className="viewport-overlay">
