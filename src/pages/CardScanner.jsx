@@ -351,7 +351,7 @@ export default function Scanner() {
                 )}`;
 
                 return (
-                  <div key={card.id} className="card-item">
+                  <div key={card.id} className="card-item text-center">
                     <a
                       href={tcgUrl}
                       target="_blank"
@@ -368,7 +368,7 @@ export default function Scanner() {
                       <div className="card-name">{card.name}</div>
                       {card.tcgplayer && card.tcgplayer.prices ? (
                         <div className="card-price">
-                          <strong>Precio TCGplayer:</strong>{" "}
+                          <strong>TCGplayer:</strong>{" "}
                           {card.tcgplayer.prices.normal
                             ? `$${
                                 card.tcgplayer.prices.normal.mid?.toFixed(2) ??
