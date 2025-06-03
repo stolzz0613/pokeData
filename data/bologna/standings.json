@@ -1,0 +1,2700 @@
+{
+  "players": [
+    {
+      "name": "Simon Tschan",
+      "deck": "roaring-moon-ex",
+      "status": "topcut"
+    },
+    {
+      "name": "Riccardo Coviello",
+      "deck": "gardevoir-ex-sv",
+      "status": "topcut"
+    },
+    {
+      "name": "Fabrizio Tallone",
+      "deck": "tera-box",
+      "status": "topcut"
+    },
+    {
+      "name": "Angelo Coralluzzo",
+      "deck": "gardevoir-ex-sv",
+      "status": "topcut"
+    },
+    {
+      "name": "Daniel Rinaldi",
+      "deck": "joltik-box",
+      "status": "topcut"
+    },
+    {
+      "name": "Julius Brunfeldt",
+      "deck": "gardevoir-ex-sv",
+      "status": "topcut"
+    },
+    {
+      "name": "Lorenzo Bruno",
+      "deck": "dragapult-ex",
+      "status": "topcut"
+    },
+    {
+      "name": "Francesco Paolo Palumbo",
+      "deck": "dragapult-dusknoir",
+      "status": "topcut"
+    },
+    {
+      "name": "Kamil Colatosti",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Bo Vinke",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Dario ScarnÃ²",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Alp Ehliz",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Magnus Pedersen",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Dario Van Meenen",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Vincenzo Cipolla",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Neddy Kosek",
+      "deck": "hydreigon-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Alberto Benvenga",
+      "deck": "gholdengo-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Daniele Pravettoni",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Federico Terraneo",
+      "deck": "tera-box",
+      "status": "day2"
+    },
+    {
+      "name": "Devid Sabli",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Julian Selimi",
+      "deck": "milotic-farigiraf",
+      "status": "day2"
+    },
+    {
+      "name": "Gino Pili",
+      "deck": "dragapult-charizard",
+      "status": "day2"
+    },
+    {
+      "name": "NicolÃ² Castignoli",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Marco Maccari",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Marek Stolarik",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Thomas Launay",
+      "deck": "n-zoroark",
+      "status": "day2"
+    },
+    {
+      "name": "Aaron Luk",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Vincenzo Bastelli",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "tommaso sponziello",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Ashley Richards",
+      "deck": "dragapult-charizard",
+      "status": "day2"
+    },
+    {
+      "name": "Silvio Caprara",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Giovanni Bertelli",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Kostas Tektonidis",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Christian D'Onofrio",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Mathias BÃ¸cker Jakobsen",
+      "deck": "dragapult-charizard",
+      "status": "day2"
+    },
+    {
+      "name": "francisco bottero",
+      "deck": "dragapult-charizard",
+      "status": "day2"
+    },
+    {
+      "name": "Victor ZHAO",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Vincenzo Cannata",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Alessandro Cremascoli",
+      "deck": "pidgeot-control",
+      "status": "day2"
+    },
+    {
+      "name": "Alberto Conti",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Atilla Gedik",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Nicolai Stiborg",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Alessio Cefola",
+      "deck": "gholdengo-dudunsparce",
+      "status": "day2"
+    },
+    {
+      "name": "Elmar Tresp",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Elias Stratmann",
+      "deck": "gholdengo-dudunsparce",
+      "status": "day2"
+    },
+    {
+      "name": "Tapio Ikonen",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Francesco MacrÃ¬",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Tobias Roberts",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Paolo Cantile",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Francesco Padovani",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Giulio Miazzo",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Claudio Foglia",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Vincenzo Seva",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Simone Mariotti",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Mateusz Mikulski",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Paolo Aparo",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Jonathan Gan",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Enrico Tomasini",
+      "deck": "tera-box",
+      "status": "day2"
+    },
+    {
+      "name": "Max Prokopov",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Daniele Sergio del Rosso",
+      "deck": "gholdengo-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Filippo Colamorea",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Cristian Sarnataro",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Daniele Savarese",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Damiano Pirosa",
+      "deck": "dragapult-charizard",
+      "status": "day2"
+    },
+    {
+      "name": "Samuele Roma",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Iacopo Tardelli",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Lorenzo Ciberti",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Elvis Caccin",
+      "deck": "milotic-farigiraf",
+      "status": "day2"
+    },
+    {
+      "name": "Filippo Nocentini",
+      "deck": "dragapult-dusknoir",
+      "status": "day2"
+    },
+    {
+      "name": "Kristian Hodas",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Piotr OrleaÅski",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Quentin MATERNAT",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Angelo De Domenico",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Janus Wagner",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Emanuele Martelli",
+      "deck": "gholdengo-dragapult",
+      "status": "day2"
+    },
+    {
+      "name": "CÃ©dric Paporello",
+      "deck": "archaludon-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Francesco Bolognesi",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Hugo De Torres",
+      "deck": "dragapult-charizard",
+      "status": "day2"
+    },
+    {
+      "name": "Jakub ObdrÅ¾Ã¡lek",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Rino Malinconico",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Sergio Ravelli",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Michael Clazzer",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Owyn Kamerman",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Mauro SpanÃ²",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Kim Pobega",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Natalia Balcer",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Alessio Di Pofi",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Fabio Lembo",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Leonardo Bandiera Marlia",
+      "deck": "froslass-munkidori",
+      "status": "day2"
+    },
+    {
+      "name": "Mattia Monticelli",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Matteo Mancini",
+      "deck": "tera-box",
+      "status": "day2"
+    },
+    {
+      "name": "Vito ButkoviÄ",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Andrea Bordignon",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Gabriele Chiocca",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Denis ProvÃ¡zek",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Adam LÃ¡sko",
+      "deck": "mamoswine-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Alfio Giuseppe Fisichella",
+      "deck": "roaring-moon-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Claudio Fontana",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Florian Giesa",
+      "deck": "gholdengo-dudunsparce",
+      "status": "day2"
+    },
+    {
+      "name": "Nicolas Darge",
+      "deck": "dragapult-dusknoir",
+      "status": "day2"
+    },
+    {
+      "name": "Giovanni Del Prete",
+      "deck": "tera-box",
+      "status": "day2"
+    },
+    {
+      "name": "Salvatore Polverino",
+      "deck": "tera-box",
+      "status": "day2"
+    },
+    {
+      "name": "Cristian Grosu",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Valerio Massini",
+      "deck": "gholdengo-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Fabio Battistella",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Jia-Hao Ma",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Giacomo Tiraboschi",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Emanuele Sirini",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Michele ScarfÃ²",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Elia Perrone",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Leon Thiemann",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Alex Conti",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Vincent Jouare",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Frankie Vines",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Emanuel Renato Stan",
+      "deck": "gholdengo-dragapult",
+      "status": "day2"
+    },
+    {
+      "name": "DILIP Vernekar",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Gabriele Amore",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Simone Alesiani",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "SONIA TELCH",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Giovanni Santuccio",
+      "deck": "dragapult-charizard",
+      "status": "day2"
+    },
+    {
+      "name": "Matteo Negro",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Michele Novak",
+      "deck": "feraligatr-tef",
+      "status": "day2"
+    },
+    {
+      "name": "Charles matthew Magnaye",
+      "deck": "dragapult-dusknoir",
+      "status": "day2"
+    },
+    {
+      "name": "Daniele Rosati",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Marcin OgÃ³rek",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Mattia Lorusso",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Konstantinos Anagnostopoulos",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Adam Polak",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Michael Hunter",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Francesco Pasquale Caterino",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Matteo ZappalÃ¡",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Marco Cacciapuoti",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Riccardo Lamera",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Alessandro Laudini",
+      "deck": "poison-archaludon",
+      "status": "day2"
+    },
+    {
+      "name": "Roland Sekerija",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Riccardo Galia",
+      "deck": "charizard-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "nicola bergamaschi",
+      "deck": "tera-box",
+      "status": "day2"
+    },
+    {
+      "name": "Matthias Filippos Doukas",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Johannes Forster",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Mateusz Kwiatosz",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Jari Senne",
+      "deck": "gholdengo-dragapult",
+      "status": "day2"
+    },
+    {
+      "name": "Georgios Karapiperis",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Mattia Giuseppe Gambino",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Alessandro Bax",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "German Arribas Gongora",
+      "deck": "dragapult-charizard",
+      "status": "day2"
+    },
+    {
+      "name": "Ciro Pascale",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "niccolÃ² genna",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Kristian Pirani",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Joseph Salagiannis",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Marco Carollo",
+      "deck": "dragapult-dusknoir",
+      "status": "day2"
+    },
+    {
+      "name": "Luca Marcon",
+      "deck": "dragapult-charizard",
+      "status": "day2"
+    },
+    {
+      "name": "LoÃ¯c Bodenez",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Nathan Doyle",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Matteo Cavani",
+      "deck": "archaludon-zoroark",
+      "status": "day2"
+    },
+    {
+      "name": "lorenzo demichele",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "day2"
+    },
+    {
+      "name": "Antonio Fortunato",
+      "deck": "n-zoroark",
+      "status": "day2"
+    },
+    {
+      "name": "Simone Soldo",
+      "deck": "froslass-munkidori",
+      "status": "day2"
+    },
+    {
+      "name": "Lennert De Clercq",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Alberto marculissi",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Kirill Mokshin",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Jaden Berberich",
+      "deck": "dragapult-dusknoir",
+      "status": "day2"
+    },
+    {
+      "name": "TjaÅ¡a RepiÄ",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Kevin Stuber",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Davide Parenti",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Davide Conte",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "day2"
+    },
+    {
+      "name": "Victor De Torres Palacios",
+      "deck": "dragapult-charizard",
+      "status": "day2"
+    },
+    {
+      "name": "Adiris Milascevic",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Giuseppe Ametrano",
+      "deck": "dragapult-charizard",
+      "status": "day2"
+    },
+    {
+      "name": "Lorenzo Salvatore",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Leonardo Torcasio",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Maciej Chojnacki",
+      "deck": "tera-box",
+      "status": "day2"
+    },
+    {
+      "name": "samuele reggiani",
+      "deck": "flareon-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Nicola Raucci",
+      "deck": "froslass-munkidori",
+      "status": "day2"
+    },
+    {
+      "name": "Mirco Di Paola",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Luigi Vezzoni",
+      "deck": "roaring-moon-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Cian Rushe",
+      "deck": "tera-box",
+      "status": "day2"
+    },
+    {
+      "name": "Stefano Ricchiuti",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Simone Veronese",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "andrea huang",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Gabriele Borghetti",
+      "deck": "gholdengo-dragapult",
+      "status": "day2"
+    },
+    {
+      "name": "lorenzo lensi",
+      "deck": "tera-box",
+      "status": "day2"
+    },
+    {
+      "name": "Christian Graziano",
+      "deck": "charizard-pidgeot",
+      "status": "day2"
+    },
+    {
+      "name": "gianluca visconti",
+      "deck": "froslass-munkidori",
+      "status": "day2"
+    },
+    {
+      "name": "Giovanni Verga",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Thomas Di Pietro",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Antonio Jardim",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Carmine Francesco Aceto",
+      "deck": "gholdengo-dragapult",
+      "status": "day2"
+    },
+    {
+      "name": "Iago Losada",
+      "deck": "raging-bolt-ogerpon",
+      "status": "day2"
+    },
+    {
+      "name": "Ciro Savarese",
+      "deck": "tera-box",
+      "status": "day2"
+    },
+    {
+      "name": "Marco Specchia",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Santiago de Saussure",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Simone Lasaponara",
+      "deck": "n-zoroark",
+      "status": "day2"
+    },
+    {
+      "name": "Francesco Morini",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Ottavio Carmelo",
+      "deck": "dragapult-dusknoir",
+      "status": "day2"
+    },
+    {
+      "name": "Lukasz Gziut",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Bruno Orefice",
+      "deck": "gardevoir-ex-sv",
+      "status": "day2"
+    },
+    {
+      "name": "Yi Fan",
+      "deck": "charizard-noctowl",
+      "status": "day2"
+    },
+    {
+      "name": "Andrea Odetti",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Pasquale Giuseppe Zavatta",
+      "deck": "pidgeot-control",
+      "status": "day2"
+    },
+    {
+      "name": "Mattia Gambarin",
+      "deck": "joltik-box",
+      "status": "day2"
+    },
+    {
+      "name": "Donatello Loperfido",
+      "deck": "dragapult-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Filippo Migliori",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "day2"
+    },
+    {
+      "name": "NÃºria Curto Benet",
+      "deck": "gholdengo-dudunsparce",
+      "status": "day2"
+    },
+    {
+      "name": "Alessio Carmignani",
+      "deck": "n-zoroark",
+      "status": "day2"
+    },
+    {
+      "name": "Giacomo Burzi",
+      "deck": "gholdengo-ex",
+      "status": "day2"
+    },
+    {
+      "name": "Gioele Dell'Andrino",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Mathias Cohen-Solal",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Pivetti",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Dominik Blache",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Alessandro Frenda",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Nicolas Magnoni",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Mark WÃ¤hra",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Enzo DUVAL",
+      "deck": "archaludon-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Francesco Nardi",
+      "deck": "charizard-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Francesco Panico",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Julius Kerkis",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Riccardo Foglia",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Jose Jorge Sayegh Lens",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Alexander Nazemi",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Christian Schrader",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Sebastjan Bagon",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Anthony Blanchard",
+      "deck": "charizard-pidgeot",
+      "status": "dnq"
+    },
+    {
+      "name": "Mirko Bertarello",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Alexandru Pricop",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Giorgio Cancian",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Shotaro MIYABE",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Matej Kermavner",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Manuel Antonio Romero Venegas",
+      "deck": "dragapult-dusknoir",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Milesi",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "StÃ©phane Ivanoff",
+      "deck": "charizard-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Chris Mastromarino",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Alessandro Martino",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Cristiano Longordo",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Marc Cabezas",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Samuel Arreytabot",
+      "deck": "roaring-moon-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Marco Mandato",
+      "deck": "espathra-xatu",
+      "status": "dnq"
+    },
+    {
+      "name": "Patrick Peter",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Calciolari",
+      "deck": "terapagos-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Mattia Ardesi",
+      "deck": "blissey-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Luca Digiovanni",
+      "deck": "charizard-dusknoir",
+      "status": "dnq"
+    },
+    {
+      "name": "xiaoyang wang",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Marco Iandelli",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Jakob Wagner",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "MichaÅ Hejduk",
+      "deck": "charizard-pidgeot",
+      "status": "dnq"
+    },
+    {
+      "name": "Kevin Kitzig",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Valerio Carista",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Simone Morandi",
+      "deck": "terapagos-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "francesco folgori",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Matteo Di Nardo",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "andrea minopoli",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "NiccolÃ² Catalani",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Gabriele Lessio",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Michele Musolino",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Gianluca Foglia",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Davide Pasini",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Francesco Paolo Marino",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Marco Ventimiglia",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Filip MikuliÄ",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Filippo Roberto Fornaro",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Matteo Basilici",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Fuga",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Daniele Gabriele",
+      "deck": "dragapult-pidgeot",
+      "status": "dnq"
+    },
+    {
+      "name": "Liliana ImrichovÃ¡",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Adriano D'Angelo",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Alberto Marconi",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Michael Meazzo",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Alex Scopini",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "NicolÃ² Crescini",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "AlbÃ©ric Lutz",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "SAMUEL MENUT",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "PANAGIOTIS GIANNOPOULOS",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Panagiotis Gerasimatos",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Alessandro Giuliano",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Giorgio Gatti",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Riccardo Principe",
+      "deck": "gholdengo-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Roberto Oliveira",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Emanuele Mazzoleni",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Carmine Scaglione",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Mads Jensen",
+      "deck": "hydreigon-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Ali Dogan Aslan",
+      "deck": "dragapult-dusknoir",
+      "status": "dnq"
+    },
+    {
+      "name": "Stefano Miglia",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Davide Berrino",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Nino Brodar",
+      "deck": "terapagos-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Vincenzo Pendolino",
+      "deck": "iron-hands-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Dario Di Nunzio",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Dimitrios Gasteratos",
+      "deck": "milotic-farigiraf",
+      "status": "dnq"
+    },
+    {
+      "name": "Giacomo Pagliaro",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Annachiara Rigo",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Francesco Ballarini",
+      "deck": "charizard-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Lorenzo Bencardino",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Dominik Bielinski",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Renato Zamporri",
+      "deck": "gholdengo-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "David Rosse",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Ciro De Pace",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Luca Gaspari",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Felice Menna",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Thomas Karg",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Matteo Abbiati",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Matteo Tenan",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Marc Torres Jimenez",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Mattia Lisciandrello",
+      "deck": "dragapult-pidgeot",
+      "status": "dnq"
+    },
+    {
+      "name": "Glenn Bauwens",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Manuel Wiechert",
+      "deck": "copperajah-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Walter Pollo",
+      "deck": "roaring-moon-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Angelo camelliti",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Luca Rosato",
+      "deck": "roaring-moon-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Sebastian Wilk",
+      "deck": "dragapult-froslass",
+      "status": "dnq"
+    },
+    {
+      "name": "Gianmaria Carelli",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Giovanna Carbonara",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Stefano Buso",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Massimo Jacopo Favaretto",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Giovanni Vettore",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Patryk PiÄtek",
+      "deck": "roaring-moon-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Renaud LEVAIN",
+      "deck": "charizard-pidgeot",
+      "status": "dnq"
+    },
+    {
+      "name": "Erasmo Luca Giovanniello",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Zamboni",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Rosario Andrea La Spina",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Theocharis Iakovidis",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Nerses Fatunz",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Filippo Caputo",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Daniele Bertoncini",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Alessio Gattamorta",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Luigi Pezzoli",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Alexandru Paul Asaftei",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Pietro Aldighieri",
+      "deck": "n-zoroark",
+      "status": "dnq"
+    },
+    {
+      "name": "VALERIO SUCCETTI",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Leonardo Valente",
+      "deck": "n-zoroark",
+      "status": "dnq"
+    },
+    {
+      "name": "Ivan Finamore",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Alessandro Arca",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Stefano Grenno",
+      "deck": "poison-archaludon",
+      "status": "dnq"
+    },
+    {
+      "name": "Luca Chiariello",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Samuele Gnoli",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Ciro Erco",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Steven Mills",
+      "deck": "charizard-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Paolo Miroballi",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Carlo Bellello",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "cristian lombardo",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Gaetano Granata",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Matteo Corni",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Raffaele Chiocca",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Claudio Esposito",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Pio Prencipe",
+      "deck": "mamoswine-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Zanini",
+      "deck": "gholdengo-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Peili Zhou",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Simone Canziani",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Yuliia Ilina",
+      "deck": "poison-archaludon",
+      "status": "dnq"
+    },
+    {
+      "name": "Paolo Ciccotto",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Jason Moretti",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Octavian Stegarescu",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "MikoÅaj Plich",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Pietro Concini",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Siebe Bauwens",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Niels Van Ravenzwaaij",
+      "deck": "gholdengo-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Mario Schroder",
+      "deck": "charizard-pidgeot",
+      "status": "dnq"
+    },
+    {
+      "name": "Alberto Nesca",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Arthur Gibelin",
+      "deck": "n-zoroark",
+      "status": "dnq"
+    },
+    {
+      "name": "Alessandro Andresani",
+      "deck": "toedscruel-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Gabriele Pula",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Paolo Ambrosini",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Arnaud STOLL",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Benanti",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Alessandro Cattaneo",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Gianpiero Villano",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Jason Welke",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Gennaro Iervolino",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Samuele Sivieri",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Martin Budka",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Bizel Cyril",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Christopher Hau",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Raul Cannizzo",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Matteo Lampugnano",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Alessandro Falcone",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Mario Imaprato",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Luigi Bautista",
+      "deck": "ceruledge-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Paul Doherty",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Manuel Piccardi",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Marco De Lorenzi",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Alexander Gindlhumer",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Victor Heredia",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Roberto Divano",
+      "deck": "n-zoroark",
+      "status": "dnq"
+    },
+    {
+      "name": "Claudio ippolito",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Luca Fortuna",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Matteo Debernardis",
+      "deck": "charizard-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Francesco Parazzini",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Mirco Quatrale",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "christian gomitoli",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Chris-Harry Finch",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Alexandru Rat",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Fabrizio Majolino",
+      "deck": "dragapult-dusknoir",
+      "status": "dnq"
+    },
+    {
+      "name": "Riccardo Croce",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Sebastiano Tognetti",
+      "deck": "dragapult-froslass",
+      "status": "dnq"
+    },
+    {
+      "name": "Melanie van der Elsen",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "lorenzo chiarato",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Rasmus Wagner",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Stefano Ottaviani",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Rene Ess",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Amir Jaa",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Simone Orante",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Tommaso Falchi",
+      "deck": "slowking-scr",
+      "status": "dnq"
+    },
+    {
+      "name": "Mattia Puglisi",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Nicola Martin",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Daniel Otero MenduiÃ±a",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Matteo Marinelli",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Konstantin Shapkin",
+      "deck": "gholdengo-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Michael Plebani",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Bruno Arcelli",
+      "deck": "archaludon-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Luca Rago",
+      "deck": "dragapult-dusknoir",
+      "status": "dnq"
+    },
+    {
+      "name": "Riccardo Volpato",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Mario Milano",
+      "deck": "charizard-pidgeot",
+      "status": "dnq"
+    },
+    {
+      "name": "Gabriele Ottolini",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Marco Pieroni",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Nicola benedetto Torraca",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Luca Montani",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Alex Bonetti",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Francesco Pironti",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Gerardo Megaro",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Yuri Marangoni",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Elia Lorenzoni",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Simone Lugli",
+      "deck": "milotic-farigiraf",
+      "status": "dnq"
+    },
+    {
+      "name": "Aaron Dall'Era",
+      "deck": "poison-archaludon",
+      "status": "dnq"
+    },
+    {
+      "name": "Ferdinando Palumbo",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Nicolas GIRARDIN",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Jean-SÃ©bastien d'Anchald",
+      "deck": "gholdengo-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Federico Pasquini",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Manuel Frenda",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Gianluca Sarcina",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Francesco Baiocchi",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Federico Rampinelli",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Lorenzini",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Jan Breznar",
+      "deck": "archaludon-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Nicolas Scapin",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "simone colonna",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Tommaso Saturnini",
+      "deck": "hydreigon-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Maicol Alfier",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Oliver Bisztyga",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Emiliano Iseppi",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Jonathan Gorgos",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Thomas Scapinello",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Jacopo Toselli",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Janek JagieÅÅo",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Benjamin Gorgos",
+      "deck": "roaring-moon-dudunsparce",
+      "status": "dnq"
+    },
+    {
+      "name": "Miguel Flor S.",
+      "deck": "blissey-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "valerio puccio",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "alessandro blanda",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Antonio Fera",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Jianlong Hu",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "mattia manfredi",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Graziano Carmelo",
+      "deck": "poison-archaludon",
+      "status": "dnq"
+    },
+    {
+      "name": "Matteo Ferrari",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Mattia Peccerillo",
+      "deck": "charizard-pidgeot",
+      "status": "dnq"
+    },
+    {
+      "name": "Angelo CalÃ¬",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Cristian Marruso",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Riccardo Fonda",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Daniele Amodio",
+      "deck": "dragapult-dusknoir",
+      "status": "dnq"
+    },
+    {
+      "name": "Marco Casciana",
+      "deck": "dragapult-dusknoir",
+      "status": "dnq"
+    },
+    {
+      "name": "Carmine Cusati",
+      "deck": "dragapult-dusknoir",
+      "status": "dnq"
+    },
+    {
+      "name": "Alessandro Valenti",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Simone Grimaldi",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Riccardo Borri",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Valerio Bertaccini",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Mattia Belloni",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Edoardo Allavena",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Mattia Bichi",
+      "deck": "archaludon-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Umberto Trozzi",
+      "deck": "froslass-munkidori",
+      "status": "dnq"
+    },
+    {
+      "name": "Tobias Gervin",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Michal JelÃ­nek",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Vittorio Antonio Lavacca",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Gianfranco Romeo",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Lorenzo Contu",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Alberto Fragapane",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Matic Pirnat",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Jasmin Kirchherr",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Alberto Di Bernardo",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "riccardo ceccolini",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "GrÃ©gory MACIASZEK",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Nick Bohdan",
+      "deck": "blissey-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Nicholas Moi",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Bianchi",
+      "deck": "gardevoir-ex-sv",
+      "status": "dnq"
+    },
+    {
+      "name": "Davide Lanciotti",
+      "deck": "froslass-munkidori",
+      "status": "dnq"
+    },
+    {
+      "name": "Daniele Iofalo",
+      "deck": "terapagos-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Nicholas Forsinetti",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Kacper Nawojski",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Adrian Mulas",
+      "deck": "dragapult-dusknoir",
+      "status": "dnq"
+    },
+    {
+      "name": "Christoph Kochseder",
+      "deck": "dragapult-dusknoir",
+      "status": "dnq"
+    },
+    {
+      "name": "Davide Nicolini",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Tim Nowak",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Manuel Fabiano",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Carlo Mancini",
+      "deck": "blissey-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Elisio Lemoine",
+      "deck": "dragapult-charizard",
+      "status": "dnq"
+    },
+    {
+      "name": "Daniele Ricci",
+      "deck": "tera-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Jacopo Sernesi",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Javier Rosano",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Gabriel Sandri",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Marwan ATTOBI",
+      "deck": "charizard-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Stefano Conti",
+      "deck": "charizard-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Nicola Poggiana",
+      "deck": "charizard-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Ali Atasagun",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Carlo Serra",
+      "deck": "joltik-box",
+      "status": "dnq"
+    },
+    {
+      "name": "Sergio Falcone",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Giuseppe Santoro",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Andrea Terranova",
+      "deck": "flareon-noctowl",
+      "status": "dnq"
+    },
+    {
+      "name": "Giuseppe Minino",
+      "deck": "gholdengo-dragapult",
+      "status": "dnq"
+    },
+    {
+      "name": "Marco Perico",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Yuri Senaldi",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Sajjad Mannan",
+      "deck": "dragapult-dusknoir",
+      "status": "dnq"
+    },
+    {
+      "name": "Fabiano De Gasperi",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Danilo Rotella",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Federico Casamassima",
+      "deck": "mamoswine-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Matteo Mei",
+      "deck": "raging-bolt-ogerpon",
+      "status": "dnq"
+    },
+    {
+      "name": "Roberto Lenisa",
+      "deck": "dragapult-ex",
+      "status": "dnq"
+    },
+    {
+      "name": "Cristian Sala",
+      "deck": "poison-archaludon",
+      "status": "dnq"
+    },
+    {
+      "name": "Malaurie Goudard",
+      "deck": "joltik-box",
+      "status": "dnq"
+    }
+  ],
+  "deckIcons": {
+    "roaring-moon-ex": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/roaring-moon.png"
+    ],
+    "gardevoir-ex-sv": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/gardevoir.png"
+    ],
+    "tera-box": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon-wellspring.png"
+    ],
+    "joltik-box": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/joltik.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/pikachu.png"
+    ],
+    "dragapult-ex": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png"
+    ],
+    "dragapult-dusknoir": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/dusknoir.png"
+    ],
+    "raging-bolt-ogerpon": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/raging-bolt.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/ogerpon.png"
+    ],
+    "flareon-noctowl": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/flareon.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png"
+    ],
+    "hydreigon-ex": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/hydreigon.png"
+    ],
+    "gholdengo-ex": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/gholdengo.png"
+    ],
+    "milotic-farigiraf": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/milotic.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/farigiraf.png"
+    ],
+    "dragapult-charizard": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/charizard.png"
+    ],
+    "n-zoroark": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/zoroark.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/darmanitan.png"
+    ],
+    "pidgeot-control": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/pidgeot.png"
+    ],
+    "gholdengo-dudunsparce": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/gholdengo.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/dudunsparce.png"
+    ],
+    "gholdengo-dragapult": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/gholdengo.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png"
+    ],
+    "archaludon-ex": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/archaludon.png"
+    ],
+    "froslass-munkidori": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/froslass.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/munkidori.png"
+    ],
+    "mamoswine-ex": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/mamoswine.png"
+    ],
+    "feraligatr-tef": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/feraligatr.png"
+    ],
+    "poison-archaludon": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/archaludon.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/brute-bonnet.png"
+    ],
+    "charizard-noctowl": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/charizard.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png"
+    ],
+    "archaludon-zoroark": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/archaludon.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/zoroark.png"
+    ],
+    "roaring-moon-dudunsparce": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/roaring-moon.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/dudunsparce.png"
+    ],
+    "charizard-pidgeot": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/charizard.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/pidgeot.png"
+    ],
+    "archaludon-dudunsparce": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/archaludon.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/dudunsparce.png"
+    ],
+    "espathra-xatu": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/espathra.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/xatu.png"
+    ],
+    "terapagos-noctowl": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/terapagos.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/noctowl.png"
+    ],
+    "blissey-ex": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/blissey.png"
+    ],
+    "charizard-dusknoir": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/charizard.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/dusknoir.png"
+    ],
+    "dragapult-pidgeot": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/pidgeot.png"
+    ],
+    "iron-hands-ex": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/iron-hands.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/iron-crown.png"
+    ],
+    "copperajah-ex": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/copperajah.png"
+    ],
+    "dragapult-froslass": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/dragapult.png",
+      "https://r2.limitlesstcg.net/pokemon/gen9/froslass.png"
+    ],
+    "toedscruel-ex": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/toedscruel.png"
+    ],
+    "ceruledge-ex": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/ceruledge.png"
+    ],
+    "slowking-scr": [
+      "https://r2.limitlesstcg.net/pokemon/gen9/slowking.png"
+    ]
+  }
+}
