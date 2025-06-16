@@ -1,0 +1,42 @@
+{
+  "raging-bolt/ogerpon": {
+    "en": "Raging-Bolt/Ogerpon posted an average win rate of 42.4% across all matchups in this dataset, suggesting it maintained a mid-tier position with moderate success.",
+    "es": "Raging-Bolt/Ogerpon obtuvo una tasa de victoria promedio de 42.4% en todos los enfrentamientos de este conjunto de datos, lo que sugiere que mantuvo una posición de nivel medio con un éxito moderado."
+  },
+  "grimmsnarl/froslass": {
+    "en": "Grimmsnarl/Froslass averaged a 43.1% win rate, proving to be a competitive rogue deck with some favorable matchups, particularly against Gardevoir.",
+    "es": "Grimmsnarl/Froslass promedió una tasa de victoria de 43.1%, demostrando ser un mazo rogue competitivo con algunos enfrentamientos favorables, especialmente contra Gardevoir."
+  },
+  "gardevoir": {
+    "en": "Gardevoir recorded an average win rate of 41.6%, indicating a slight decline from previous performances and struggling against popular decks like Grimmsnarl/Froslass.",
+    "es": "Gardevoir registró una tasa de victoria promedio de 41.6%, lo que indica una ligera caída respecto a rendimientos anteriores y dificultades frente a mazos populares como Grimmsnarl/Froslass."
+  },
+  "joltik-box": {
+    "en": "joltik-box achieved a 44.2% average win rate, maintaining consistent mid-tier results with no extreme highs or lows.",
+    "es": "joltik-box logró una tasa de victoria promedio de 44.2%, manteniendo resultados consistentes de nivel medio sin altibajos extremos."
+  },
+  "dragapult/charizard": {
+    "en": "Dragapult/Charizard posted a 40.4% average win rate, showing that while it has potential in specific matchups, it remains an inconsistent contender overall.",
+    "es": "Dragapult/Charizard obtuvo una tasa de victoria promedio de 40.4%, mostrando que, aunque tiene potencial en enfrentamientos específicos, sigue siendo un contendiente inconsistente en general."
+  },
+  "dragapult/dusknoir": {
+    "en": "Dragapult/Dusknoir delivered a 42.7% average win rate, an improvement over previous sets, but still lacking the dominance to break into top-tier status.",
+    "es": "Dragapult/Dusknoir ofreció una tasa de victoria promedio de 42.7%, una mejora respecto a sets anteriores, pero aún sin la fuerza suficiente para entrar al nivel superior."
+  },
+  "flareon/noctowl": {
+    "en": "Flareon/Noctowl averaged a 39.3% win rate, showing a decline in performance and struggling across most matchups.",
+    "es": "Flareon/Noctowl promedió una tasa de victoria de 39.3%, mostrando una caída en el rendimiento y dificultades en la mayoría de los enfrentamientos."
+  },
+  "gholdengo/dragapult": {
+    "en": "Gholdengo/Dragapult recorded a 41.3% average win rate, reflecting a balanced but unremarkable position in the metagame.",
+    "es": "Gholdengo/Dragapult registró una tasa de victoria promedio de 41.3%, reflejando una posición equilibrada pero poco destacada en el metajuego."
+  },
+  "gholdengo": {
+    "en": "Pure Gholdengo posted a 40.3% win rate, similar to previous results, underlining its stable but limited impact.",
+    "es": "Gholdengo puro obtuvo una tasa de victoria de 40.3%, similar a resultados anteriores, subrayando su impacto estable pero limitado."
+  },
+  "dragapult": {
+    "en": "Pure Dragapult reached an average win rate of 42.3%, confirming its status as a solid but not dominant deck in the current format.",
+    "es": "Dragapult puro alcanzó una tasa de victoria promedio de 42.3%, confirmando su estatus como un mazo sólido pero no dominante en el formato actual."
+  }
+}

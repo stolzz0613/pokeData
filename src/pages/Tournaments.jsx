@@ -5,7 +5,9 @@ export default function Tournaments() {
   const getBadgeUrl = (type) =>
     type === 'Regional'
       ? 'https://limitless3.nyc3.cdn.digitaloceanspaces.com/web/tournaments/regional.png'
-      : 'https://limitless3.nyc3.cdn.digitaloceanspaces.com/web/tournaments/special.png';
+      : type === 'International'
+        ? 'https://limitless3.nyc3.cdn.digitaloceanspaces.com/web/tournaments/international.png'
+        : 'https://limitless3.nyc3.cdn.digitaloceanspaces.com/web/tournaments/special.png';
 
   return (
     <><header className="flex shadow p-4 px-4 md:px-12 mb-6 justify-between" style={{ backgroundColor: '#0065B0' }}>

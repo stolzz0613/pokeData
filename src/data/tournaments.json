@@ -7,5 +7,6 @@
     { "slug": "santiago",   "name": "Santiago",   "icon": "🌋", "type": "Regional" },
     { "slug": "utrecht",    "name": "Utrecht",    "icon": "🏰", "type": "Special" },
     { "slug": "portland",   "name": "Portland",    "icon": "🌲", "type": "Regional" },
-    { "slug": "bologna",   "name": "Bologna",    "icon": "🌲", "type": "Special" }
+    { "slug": "bologna",   "name": "Bologna",    "icon": "🌲", "type": "Special" },
+    { "slug": "NAIC",   "name": "NAIC",    "icon": "🌲", "type": "International" }
 ]
