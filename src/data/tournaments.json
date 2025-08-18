@@ -8,5 +8,6 @@
     { "slug": "utrecht",    "name": "Utrecht",    "icon": "🏰", "type": "Special" },
     { "slug": "portland",   "name": "Portland",    "icon": "🌲", "type": "Regional" },
     { "slug": "bologna",   "name": "Bologna",    "icon": "🌲", "type": "Special" },
-    { "slug": "NAIC",   "name": "NAIC",    "icon": "🌲", "type": "International" }
+    { "slug": "NAIC",   "name": "NAIC",    "icon": "🌲", "type": "International" },
+    { "slug": "worlds",   "name": "Worlds2025",    "icon": "🌲", "type": "Worlds" }
 ]
