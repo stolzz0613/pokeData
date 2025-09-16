@@ -7,5 +7,7 @@
     { "slug": "santiago",   "name": "Santiago",   "icon": "🌋" },
     { "slug": "utrecht",    "name": "Utrecht",    "icon": "🏰" },
     { "slug": "NAIC",    "name": "NAIC",    "icon": "🏰" },
-    { "slug": "worlds",    "name": "Worlds",    "icon": "🏰" }
+    { "slug": "worlds",    "name": "Worlds",    "icon": "🏰" },
+        { "slug": "frankfurt",    "name": "frankfurt",    "icon": "🏰" },
+        { "slug": "monterrey25",  "name": "Monterrey25",  "icon": "🏰" }
 ]
