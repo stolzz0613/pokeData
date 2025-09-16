@@ -9,5 +9,7 @@
     { "slug": "portland",   "name": "Portland",    "icon": "🌲", "type": "Regional" },
     { "slug": "bologna",   "name": "Bologna",    "icon": "🌲", "type": "Special" },
     { "slug": "NAIC",   "name": "NAIC",    "icon": "🌲", "type": "International" },
-    { "slug": "worlds",   "name": "Worlds2025",    "icon": "🌲", "type": "Worlds" }
+    { "slug": "worlds",   "name": "Worlds2025",    "icon": "🌲", "type": "Worlds" },
+    { "slug": "frankfurt",    "name": "frankfurt",    "icon": "🏰", "type": "Regional" },
+    { "slug": "monterrey25",  "name": "Monterrey",  "icon": "🏰", "type": "Regional" }
 ]
